@@ -1,0 +1,97 @@
+.bookandCount{
+    margin-left: 134px; 
+    margin-top: 45px;
+}
+.books{
+    font-size: 25px;
+
+}
+.count{
+    margin-left: 10px;
+    font-size: 15px;
+    opacity: 0.6;
+}
+.sortbyrelevance{
+    margin-top: 80px; 
+    margin-right: 134px;
+    border-radius: none;
+    outline: none;
+
+}
+.mat-form-field{
+   outline: none;
+   border-radius: none;
+
+}
+.matselect{
+   height: 10px;
+   outline: none;
+}
+
+.entirebook{
+    border: 1px solid gainsboro;
+    width: 250px;
+    height: 320px;
+    // margin-right: 65%;
+    margin: 20px;
+}
+.entirebook:hover{
+    box-shadow: rgba(0,0,0,0.24) 0px 3px 8px;
+    
+}
+.bookimg{
+    width: 251px;
+    height: 210px;  
+    background-color: gainsboro;
+    margin-top: -1px;
+}
+.img1{
+    width: 110px;
+    height: 140px;
+    margin-left: 70px;
+    margin-top: 30px;
+}
+.bookname{
+    margin-left: 15px;
+    font-family: Roboto;
+    font-weight: 500; 
+    margin-top: 8px;
+  }
+  .author{
+    //border: 1px solid green;
+    font-size: 10px; 
+    color: grey; 
+    margin-left: 15px;    
+  }
+  .rating{
+    font-size: 10px; 
+    margin-left: 15px;
+    background: rgba(0, 100, 0, 0.87);
+    color: white;
+    height: 14px;
+    width: 35px;
+  }
+  .Star{
+    height: 11px;
+    width: 11px;
+    font-size: 10px; 
+    margin-top: -1px;
+    // margin-left: 3px;
+  }
+  .quantity{
+    font-size: 10px;
+    margin-top: -18px;
+    margin-left: 55px;
+  }
+  .price{
+    font-size: 10px;
+    margin-left: 15px;
+    margin-bottom: 10%;
+  }
+  .discountprice{
+    font-weight: 600;
+  }
+  .originalprice{
+    color: grey;
+    margin-left: 5px;
+  }

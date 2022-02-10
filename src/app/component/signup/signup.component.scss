@@ -1,0 +1,119 @@
+.section{
+    background-color: grey;
+    width: 100%;
+    height: 100%;
+}
+.matcard1{
+    background-color:#F5F5F5;
+    // margin-top: 200px; 
+    // margin-right: -20px;
+    height: 410px; 
+    width: 330px;
+    border-radius: 25px;
+    // padding-bottom: 10px; 
+    display: flex; 
+    // position: relative;
+    // top: 25%;
+    // left: 20%;
+}
+.img1{
+    // border: 2px solid red;
+    height: 230px;
+    width: 230px;
+    border-radius: 130px;
+    margin-left: 40px;
+    margin-top: 40px;
+}
+.text{
+    // border: 1px solid yellow ;
+    // text-align: center;
+    font-size: 14px;
+    font-family: Roboto, sans-serif;
+    letter-spacing: 0px;
+    color: #0A0102;
+    font-weight: 500;
+    opacity: 1;
+    height: 60px;
+    width: 240px;
+    margin-top: 310px;
+    margin-right: 40px;
+    display: flex;
+    position: relative;
+    right: 190px;
+   
+}
+
+.matcard2{
+    background-color:#F5F5F5;
+    // margin-top: 200px; 
+    // margin-right: -20px;
+    height: 480px; 
+    width: 340px;
+    // padding-bottom: 10px; 
+    display: flex; 
+    position: relative;
+    // top: -38%; 
+    // left: 42%;
+    right: 3%;
+}
+
+.login{
+    // border: 1px solid red;
+    margin-top: 15px;
+    margin-bottom: 430px;
+    position: relative;
+    left: 35px;
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #878787;
+    cursor: pointer;
+
+}
+.signup{
+    // border: 1px solid green;
+    margin-top: 15px;
+    margin-bottom: 310px;
+    display: flex;
+    position: relative;
+    left: 180px;
+    bottom: 60px; 
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #878787;
+    cursor: pointer;
+
+}
+
+.form{
+    // border: 1px solid red;
+    position: relative;
+    right: 34%;
+    top: 12%;
+    width: 100%;
+}
+.fullname{
+    // border: 1px solid green;
+    height: 18%;
+}
+.mat-form-field{
+    // height: 5px;
+    width: 275px;
+}
+.password{
+    // border: 1px solid green;
+    height: 18%;
+}
+.number{
+    // border: 1px solid green;
+    height: 18%;
+}
+.signupbutton{
+    width: 275px;
+    background-color: brown;
+    color: white;
+    position: relative;
+    // top: 15px;
+
+}

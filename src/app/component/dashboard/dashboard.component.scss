@@ -1,0 +1,65 @@
+.mattoolbar{
+  background-color: brown;
+   width: 100%;
+}
+.imgandtext{
+   margin-left: -18px;
+}
+.book{
+    height: 40px;
+    width: 40px;
+    margin-top: 10px;
+    border-radius: 20px;
+    margin-left: 200px;
+    border: none;
+    
+}
+.text{
+  color: white;
+  margin-left: 10px;
+  margin-top: 12px;
+  opacity: 0.9;
+  cursor: pointer;
+
+}
+.searchbar{
+    margin-left: 60px;
+    width: 33%;
+    height: 40px;
+}
+.searchimg{
+    // border: 1px solid green;
+    opacity: 0.6;
+    height: 24px;
+    width: 24px;
+   position: relative;
+   top: -6px;
+
+}
+.search1{
+    height: 10px;
+    border: none;
+    outline: none;
+    
+}
+.profile{
+    margin-left: 270px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+.profileimg{
+    margin-left: -5px;
+
+}
+.cart{
+    margin-left: 60px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+.cartimg{
+
+}
+p{
+    color: white; 
+    opacity: 0.9;
+}

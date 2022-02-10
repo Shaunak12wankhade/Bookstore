@@ -1,0 +1,87 @@
+<div class="section" fxLayout="row" fxLayoutAlign="center center">
+
+    <mat-card class="matcard1" fxHide.sm fxHide.xs>
+
+        <div>
+            <img class="img1" src="../../../assets/book_store.png" alt="">
+        </div>
+
+        <div class="text">
+            ONLINEBOOKSHOPPING
+        </div>
+    </mat-card>
+
+    <mat-card class="matcard2" fxLayout.xs="column" fxLayout.sm="column" fxFlex.xs="95" fxFlex.sm="60">
+        <!-- <div > -->
+            <div fxLayout="row" fxLayoutAlign="center center" fxLayout.xs="row" fxLayout.sm="row" fxFlex.xs="95"
+                fxFlex.xs="60">
+                <div class="login">
+                    <P>LOGIN</P>
+                </div>
+                <div class="signup" routerLink="/signup">
+                    <p>SIGNUP</p>
+                </div>
+            </div>
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <div class="form">
+
+                    <div class="email">
+                        <div>
+                            <mat-label>Email Id</mat-label>
+                        </div>
+                        <div>
+                            <mat-form-field appearance="outline">
+
+                                <input type="text" formControlName="email" matInput placeholder="">
+                                <mat-error>Enter an email address</mat-error>
+                            </mat-form-field>
+
+                        </div>
+
+                    </div>
+
+                    <div class="password">
+                        <div>
+                            <mat-label>Password</mat-label>
+                        </div>
+                        <div>
+                            <mat-form-field appearance="outline">
+
+                                <input type="text" formControlName="password" matInput placeholder="">
+                                <mat-error>Enter a password</mat-error>
+                            </mat-form-field>
+
+                        </div>
+
+                    </div>
+
+                    <div class="forgotpasswordbutton">
+                        <button class="button" routerLink="/forgotemail">Forgot password?</button>
+
+                    </div>
+
+                    <div>
+                        <button class="signupbutton" mat-flat-button>Login</button>
+                    </div>
+
+                    <div class="or">
+                        <h2>OR</h2>
+                    </div>
+
+                    <div>
+                        <div class="button1" fxLayoutGap="20px">
+                            <button class="facebookbutton" mat-flat-button color="primary">Facebook</button>
+                            <button class="googlebutton" mat-flat-button>Google</button>
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+            </form>
+        <!-- </div> -->
+    </mat-card>
+
+</div>

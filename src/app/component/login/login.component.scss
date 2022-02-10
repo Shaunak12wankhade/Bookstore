@@ -1,0 +1,157 @@
+.section{
+    background-color: gray;
+    width: 100%;
+    height: 100%;
+}
+.matcard1{
+    background-color:#F5F5F5;
+    // margin-top: 200px; 
+    // margin-right: -20px;
+    height: 410px; 
+    width: 330px;
+    border-radius: 25px;
+    // padding-bottom: 10px; 
+    display: flex; 
+    // position: relative;
+    // top: 25%;
+    // left: 20%;
+}
+.img1{
+    // border: 2px solid red;
+    height: 230px;
+    width: 230px;
+    border-radius: 130px;
+    margin-left: 40px;
+    margin-top: 40px;
+}
+.text{
+    // border: 1px solid yellow ;
+    // text-align: center;
+    font-size: 14px;
+    font-family: Roboto, sans-serif;
+    letter-spacing: 0px;
+    color: #0A0102;
+    font-weight: 500;
+    opacity: 1;
+    height: 60px;
+    width: 240px;
+    margin-top: 310px;
+    margin-right: 40px;
+    display: flex;
+    position: relative;
+    right: 190px;
+   
+}
+
+.matcard2{
+    background-color:#F5F5F5;
+    // margin-top: 200px; 
+    // margin-right: -20px;
+    height: 480px; 
+    width: 340px;
+    // padding-bottom: 10px; 
+    display: flex; 
+    position: relative;
+    // top: -38%; 
+    // left: 42%;
+    right: 3%;
+}
+
+.login{
+    // border: 1px solid red;
+    margin-top: 15px;
+    margin-bottom: 430px;
+    position: relative;
+    left: 35px;
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #878787;
+    cursor: pointer;
+
+}
+.signup{
+    // border: 1px solid green;
+    margin-top: 15px;
+    margin-bottom: 310px;
+    display: flex;
+    position: relative;
+    left: 180px;
+    bottom: 60px; 
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #878787;
+    cursor: pointer;
+
+}
+
+.form{
+    // border: 1px solid red;
+    position: relative;
+    right: 34%;
+    top: 12%;
+    width: 100%;
+}
+.mat-form-field{
+    // height: 5px;
+    width: 275px;
+}
+.password{
+    // border: 1px solid green;
+    height: 18%;
+}
+.forgotpasswordbutton{
+    //  border: 1px solid yellow;
+     font-size: 14px;
+    //  height: 40px;
+     padding: 6px 8px;
+    //  margin: 2px;
+     margin-top: -8%;
+}
+.button{
+    font-family: "Google Sans",Roboto,Arial,sans-serif;
+    color: var(--gm-colortextbutton-ink-color,grey);
+    background-color: transparent;
+    font-size: .875rem;
+    letter-spacing: .0107142857em;
+    font-weight: 500;
+    text-transform: none;
+    cursor: pointer;
+    border: none;
+    margin-left: 120px;
+    padding-left: 16px;
+    opacity: 0.6;
+}
+.signupbutton{
+    width: 275px;
+    background-color: brown;
+    color: white;
+    position: relative;
+    // top: 15px;
+    margin-top: 10px;
+
+}
+
+.or{
+//  border: 1px solid black;
+    margin-top: 30px;
+}
+h2{
+//  border: 1px solid yellow;
+    padding-left: 120px;
+}
+.button1{
+//  border: 1px solid peru;
+    margin-top: 20px;
+}
+.facebookbutton{
+    // border: 1px solid green;
+    width: 130px;
+}
+.googlebutton{
+    // border: 1px solid red;
+    border: 1px solid gainsboro;
+    width: 122px;
+    background-color: transparent;
+}

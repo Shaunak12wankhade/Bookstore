@@ -1,0 +1,94 @@
+<div class="section" fxLayout="row" fxLayoutAlign="center center">
+
+    <mat-card class="matcard1" fxHide.sm fxHide.xs>
+
+        <div>
+            <img class="img1" src="../../../assets/book_store.png" alt="">
+        </div>
+
+        <div class="text">
+            ONLINEBOOKSHOPPING
+        </div>
+    </mat-card>
+
+    <mat-card class="matcard2" fxLayout.xs="column" fxLayout.sm="column" fxFlex.xs="95" fxFlex.sm="60">
+        <div fxLayout="row" fxLayoutAlign="center center" fxLayout.xs="row" fxLayout.sm="row" fxFlex.xs="95" fxFlex.xs="60">
+            <div class="login" routerLink="/login">
+                <P>LOGIN</P>
+            </div>
+            <div class="signup">
+                <p>SIGNUP</p>
+            </div>
+        </div>
+        <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+            <div class="form">
+                <div class="fullname">
+                    <div>
+                        <mat-label>Full Name</mat-label>
+                    </div>
+                    <div>
+                        <mat-form-field appearance="outline">
+
+                            <input type="text" formControlName="fullName" matInput placeholder="">
+                            <mat-error>Enter full name</mat-error>
+                        </mat-form-field>
+
+                    </div>
+
+                </div>
+
+                <div class="email">
+                    <div>
+                        <mat-label>Email Id</mat-label>
+                    </div>
+                    <div>
+                        <mat-form-field appearance="outline">
+
+                            <input type="text" formControlName="email" matInput placeholder="">
+                            <mat-error>Enter an email address</mat-error>
+                        </mat-form-field>
+
+                    </div>
+
+                </div>
+
+                <div class="password">
+                    <div>
+                        <mat-label>Password</mat-label>
+                    </div>
+                    <div>
+                        <mat-form-field appearance="outline">
+
+                            <input type="text" formControlName="password" matInput placeholder="">
+                            <mat-error>Enter a password</mat-error>
+                        </mat-form-field>
+
+                    </div>
+
+                </div>
+
+                <div class="number">
+                    <div>
+                        <mat-label>Mobile Number</mat-label>
+                    </div>
+                    <div>
+                        <mat-form-field appearance="outline">
+
+                            <input type="text" formControlName="mobileNo" matInput placeholder="">
+                            <mat-error>Enter a mobile number</mat-error>
+                        </mat-form-field>
+
+                    </div>
+
+                </div>
+
+                <div>
+                    <button class="signupbutton" mat-flat-button>Signup</button>
+                </div>
+
+
+            </div>
+        </form>
+    </mat-card>
+
+</div>
