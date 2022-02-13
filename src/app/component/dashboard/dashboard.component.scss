@@ -1,6 +1,8 @@
 .mattoolbar{
-  background-color: brown;
+  background-color: rgb(165, 42, 42);
    width: 100%;
+   position: fixed;
+   overflow:hidden;
 }
 .imgandtext{
    margin-left: -18px;
@@ -8,8 +10,8 @@
 .book{
     height: 40px;
     width: 40px;
-    margin-top: 10px;
-    border-radius: 20px;
+    margin-top: 9px;
+    // border-radius: 20px;
     margin-left: 200px;
     border: none;
     
@@ -17,7 +19,7 @@
 .text{
   color: white;
   margin-left: 10px;
-  margin-top: 12px;
+  margin-top: 14px;
   opacity: 0.9;
   cursor: pointer;
 
@@ -44,16 +46,16 @@
 }
 .profile{
     margin-left: 270px;
-    margin-top: 15px;
+    margin-top: 28px;
     cursor: pointer;
 }
 .profileimg{
-    margin-left: -5px;
+    margin-left: -2px;
 
 }
 .cart{
     margin-left: 60px;
-    margin-top: 15px;
+    margin-top: 28px;
     cursor: pointer;
 }
 .cartimg{
@@ -62,4 +64,5 @@
 p{
     color: white; 
     opacity: 0.9;
+    font-size: x-small;
 }

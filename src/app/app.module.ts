@@ -21,6 +21,11 @@ import { DashboardComponent } from './component/dashboard/dashboard.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import { GetallbooksComponent } from './component/getallbooks/getallbooks.component';
+import { QuickviewComponent } from './component/quickview/quickview.component';
+
+import {NgxPaginationModule} from 'ngx-pagination';
+import { GetcartComponent } from './component/getcart/getcart.component';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 
 @NgModule({
@@ -29,7 +34,9 @@ import { GetallbooksComponent } from './component/getallbooks/getallbooks.compon
     SignupComponent,
     LoginComponent,
     DashboardComponent,
-    GetallbooksComponent
+    GetallbooksComponent,
+    QuickviewComponent,
+    GetcartComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +54,9 @@ import { GetallbooksComponent } from './component/getallbooks/getallbooks.compon
     FlexLayoutModule,
     MatSelectModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    NgxPaginationModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

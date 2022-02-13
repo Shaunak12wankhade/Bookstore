@@ -13,7 +13,7 @@ export class BookService {
    }
  
    
-  usergetallnotes(){
+  usergetallbooks(){
      
     let header= {
       headers: new HttpHeaders({
@@ -23,4 +23,26 @@ export class BookService {
     }
    return this.httpService.getService('get/book', true,header )
    }
+
+   useraddtobag( productID:any){  //here we are using product id as it is used in backend API 
+         
+    let header= {
+      headers: new HttpHeaders({
+        'Content-Type':'application/json',
+        'x-access-token':this.token    // use x-acces-token instead of authorization as it is coming from backend otherwise it will throw error
+      })
+    }
+   return this.httpService.postService('add_cart_item/'+ productID,{}, true,header )  
+   }
+
+   useraddtowishlist( productID:any){  //here we are using product id as it is used in backend API 
+         
+    let header= {
+      headers: new HttpHeaders({
+        'Content-Type':'application/json',
+        'x-access-token':this.token
+      })
+    }
+   return this.httpService.postService('add_wish_list/'+ productID,{}, true,header ) 
+  }
 }

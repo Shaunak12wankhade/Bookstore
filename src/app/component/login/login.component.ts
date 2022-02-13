@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/userservice/user.service';
 
 @Component({
@@ -11,7 +12,7 @@ export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
   submitted = false;
 
-  constructor(private formbuilder: FormBuilder, private user: UserService) { }
+  constructor(private formbuilder: FormBuilder, private user: UserService, private route:Router) { }
 
   ngOnInit(): void {
 
@@ -36,7 +37,8 @@ export class LoginComponent implements OnInit {
       }
       this.user.userlogin(payload).subscribe((response: any) => {    //subscribe is a method from observable
         console.log(response)
-        localStorage.setItem('token', response.result.accessToken);
+        localStorage.setItem('token', response.result.accessToken);  // this accessToken is coming from swagger
+        this.route.navigateByUrl("/dashboard")
       })
     } else {
       console.log("enter data");

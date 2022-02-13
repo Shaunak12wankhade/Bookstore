@@ -1,0 +1,193 @@
+.smallimages{
+    margin-bottom: 16%;
+    width: 50px;
+    height: 60px; 
+    margin-right: 5px; 
+    margin-top: 10%;
+}
+.small1{
+    border: 1px solid rgb(165, 42, 42);
+    background-color: rgba(255, 192, 203, 0.562); 
+    padding: 4px;
+}
+.img1{
+    width: 40px;
+    height: 50px;
+    padding-top: 5px;
+}
+.small2{
+    border: 1px solid gainsboro ; 
+    padding: 4px;
+    margin-top: -10px;
+
+}
+.img2{
+    width: 40px;
+    height: 50px;
+    padding-top: 3px;
+   
+}
+.imageandbutton{
+    // border:2px solid yellow;
+    width: 280px;
+    height: 380px;
+    margin-top: 10%;
+    margin-left: -4px;
+
+} 
+
+// .bigimage{
+//     border:2px solid red;
+
+//     width: 250px;
+//     height: 350px;
+// }
+
+.big1{
+    width: 280px;
+    height: 310px;
+    border: 1px solid gainsboro;
+}
+.image1{
+//    border: 20px;
+   width: 210px;
+   height: 260px;
+   padding: 25px;
+   padding-left: 32px;
+}
+
+.cartandwishlistbutton{
+    margin-top: 20px;
+
+}
+.addtobag{
+    background: brown; 
+    color: rgba(255, 255, 255, 0.767); 
+    width: 125%; 
+
+}
+.wishlist{
+    background: black; 
+    color: rgba(255, 255, 255, 0.767); 
+    width: 125%; 
+
+}
+.wishlistIcon{
+
+}
+.bookdetailsdiv{
+    margin-left: 5%; 
+    margin-bottom: 5%; 
+    margin-top: 10%;
+
+}
+.entirebook{
+    // border: 1px solid red;
+
+}
+.bookname{
+    font-size: 20px; 
+    margin-bottom: 10px;
+
+}
+.author{
+    color: grey; 
+    font-size: 15px; 
+    margin-bottom: 10px;
+
+}
+.rating{
+    background: rgba(0, 100, 0, 0.87);
+    height: 20px;
+    width: 45px;
+    color: white;
+    margin-bottom: 10px;
+
+}
+.Star{
+    height: 15px;
+    width: 15px;
+    font-size: 10px; 
+    margin-top: -1px;
+    // margin-left: 3px;
+
+}
+.quantity{
+    font-size: 15px;
+    margin-top: -30px;
+    margin-left: 55px;
+    color: grey;
+  }
+.price{
+    font-size: 20px;
+    margin-top: 10px;
+
+}
+.discountprice{
+    font-weight: 600; 
+    margin-bottom: 10px;
+
+}
+.originalprice{
+    color: grey;
+
+}
+
+
+
+
+
+
+
+
+
+.bookdetail{
+    opacity: 0.7; 
+    margin-top: 20px; 
+    margin-bottom: 5px;
+
+}
+.bookparagraph{
+    font-size: 13px;
+}
+.customerfeedback{
+    font-size: 18px; 
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+}
+.overallrating{
+    background: whitesmoke;
+   
+
+}
+.rate{
+    margin-left: 15px;
+
+}
+.ratename{
+    font-size: 13px; 
+    font-weight: 500;
+    margin-top: 10px;
+
+}
+.review{
+    height: 60px; 
+    width: 90%;
+    border: none; 
+    outline: none; 
+    margin-left: 20px;
+    font-size: 15px; 
+    opacity: 0.6;
+
+}
+.submitbutton{
+    height: 33px;
+    width: 95px;
+    margin-right: 35px; 
+    margin-top: 20px; 
+    margin-bottom: 20px;
+    opacity: 0.9;
+    
+
+}

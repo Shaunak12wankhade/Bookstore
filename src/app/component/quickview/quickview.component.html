@@ -1,0 +1,98 @@
+<div fxLayout="row" fxLayoutAlign="center start" fxLayout.xs="row" fxFlex.xs="95">
+
+    <div class="smallimages" fxLayout="column" fxLayoutGap="10px">
+        <div class="small1">
+            <img class="img1" src="../../../assets/Image 11@2x (1).png" alt="">
+        </div>
+        <div class="small2">
+            <img class="img2" src="../../../assets/Image 46@2x.png" alt="">
+        </div>
+    </div>
+
+    <div class="imageandbutton" fxLayout="column">
+
+        <div class="bigimage" fxLayout="row">
+            <div class="big1">
+                <img class="image1" src="../../../assets/Image 11@2x (1).png">
+            </div>
+        </div>
+
+        <div class="cartandwishlistbutton" fxLayout="row" fxLayoutGap="40px" fxLayoutAlign="space-between center">
+            <div>
+                <button mat-raised-button class="addtobag" (click)="addtocart()" >
+                    ADD TO BAG
+                </button>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="start center">
+                <button mat-flat-button class="wishlist" (click)="addtowishlist()" >
+                    <mat-icon class="wishlistIcon">favorite</mat-icon>
+                    WISHLIST
+                </button>
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+
+    <div class="bookdetailsdiv" fxLayout="column">
+        <div class="entirebook" fxLayout="column" fxLayout.sm="column">
+    
+            <div class="bookname">
+                {{bookdata.bookName}}
+            </div>
+            <div class="author">
+             by {{bookdata.author}}
+            </div>
+            <div class="rating"  fxLayoutAlign="space-evenly center">
+                4.5<img class="Star" src="../../../assets/star_white_24dp.svg" alt="">
+            </div>
+            <div class="quantity">
+                ({{bookdata.quantity}})
+            </div>
+    
+            <div class="price" fxLayout="row" fxLayoutGap="10px" >
+                <div class="discountprice">
+                    Rs.{{bookdata.discountPrice}}
+                </div>
+                <div class="originalprice">
+                    <del> Rs.{{bookdata.price}} </del>
+                </div>
+            </div>
+    
+        </div>
+
+        <div fxLayout="column" fxLayoutAlign="start start">
+            <span class="bookdetail">Book Detail</span>
+            <p class="bookparagraph">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut<br> labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris<br> nisi ut aliquip ex ea commodo consequat. 
+                Duis aute irure dolor in reprehenderit in voluptate velit<br> esse cillum dolore eu fugiat nulla pariatur. 
+                Excepteur sint occaecat cupidatat non proident,<br> sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+        </div>
+
+        <div class="customerfeedback">
+            <span>Customer Feedback</span>
+        </div>
+
+        <div class="overallrating">
+            <div class="rate">
+                <p class="ratename">Overall Rating</p>
+               
+            </div>
+            <div>
+                <input class="review" type="text" placeholder="Write your review">
+            </div>
+            <div fxLayoutAlign="end center">
+                <button class="submitbutton" mat-flat-button color="primary" >Submit</button>
+            </div>
+        </div>
+
+
+    </div>
+
+
+</div>

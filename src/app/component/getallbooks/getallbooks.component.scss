@@ -95,3 +95,7 @@
     color: grey;
     margin-left: 5px;
   }
+  .my-pagination ::ng-deep .ngx-pagination .current {
+    background: brown;
+  }
+  
