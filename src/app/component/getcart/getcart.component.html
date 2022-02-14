@@ -1,17 +1,77 @@
-<div class="cartcount">
-    <span class="count">My Cart({{cartcount}})</span>
-</div>
+<mat-accordion>
+    <mat-expansion-panel class="panel1" [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                My Cart({{cartcount}})
+            </mat-panel-title>
 
-<div class="section">
-    <div fxLayout="row" fxLayoutAlign="space-evenly center">
-        <div fxLayout="column">
-            <div class="entirebook" fxLayout="row" fxLayout="start center">
-                
+        </mat-expansion-panel-header>
+
+
+        <!-- <div class="cartcount">
+    <span class="count">My Cart({{cartcount}})</span>
+</div> -->
+
+        <div class="section">
+            <div fxLayout="row" fxLayoutAlign="center center">
+                <div fxLayout="column" fxLayoutGap="20px">
+                    <div class="cartbook" fxLayout="row" fxLayout="start center" *ngFor="let book of cartbooks">
+                        <div>
+                            <div class="image" fxLayoutAlign="start center">
+                                <img class="bookImage" src="../../../assets/Image 11@2x.png">
+                            </div>
+                        </div>
+
+                        <div class="entirebook" fxLayout="column" fxLayout.sm="column">
+
+                            <div class="bookname">
+                                {{book.product_id.bookName}}
+                            </div>
+                            <div class="author">
+                                by {{book.product_id.author}}
+                            </div>
+                            <div class="price" fxLayout="row" fxLayoutGap="10px">
+                                <div class="discountprice">
+                                    Rs.{{book.product_id.discountPrice}}
+                                </div>
+                                <div class="originalprice">
+                                    <del> Rs.{{book.product_id.price}} </del>
+                                </div>
+                            </div>
+
+                            <div class="quantity" fxLayout="row" fxLayoutAlign="space-evenly center">
+                                <button mat-mini-fab class="negativebutton" (click)="negative(book)">
+                                    <!--this (book) is coming from ngFor book of cart books, we are passing this book as an argument in click function because in getcart.ts file in negative() & updatequantity() method we have given argument as (book:any)-->
+                                    <span class="negative">-</span>
+                                </button>
+                                <span class="bookquantity"> {{book_qty}} </span>
+                                <button mat-mini-fab class="positivebutton" (click)="positive(book)">
+                                    <!--this (book) is coming from ngFor book of cart books, we are passing this (book) as an argument in click function because in getcart.ts file in positive() & updatequantity() method we have given argument as (book:any)-->
+                                    <span class="positive">+</span>
+                                </button>
+                                <span class="remove" (click)="removecartitem(book)">Remove</span>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <div class="rightdiv" fxLayout="column" fxLayoutAlign="space-between center" fxLayoutGap="80%">
+                    <div class="location" fxLayoutAlign="center center">
+                        <mat-icon class="placeIcon">place</mat-icon>
+                        <span class="loc">Use current location</span>
+                    </div>
+                    <div>
+                        <button mat-flat-button class="button" color="primary" >Place Order</button>
+                    </div>
+                </div>
 
             </div>
 
         </div>
+    </mat-expansion-panel>
 
-    </div>
-
-</div>
+</mat-accordion>

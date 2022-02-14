@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { BookService } from 'src/app/services/bookservice/book.service';
 
 @Component({
@@ -11,11 +12,15 @@ export class QuickviewComponent implements OnInit {
 
   bookid:any;  // used as a variable to store book id's
 
-  constructor(private books:BookService) { }
+  constructor(private books:BookService, private activatedroute: ActivatedRoute) { }
 
   ngOnInit(): void {
 
-    this.bookid=localStorage.getItem("bookId")  
+    // this.bookid=localStorage.getItem("bookId") 
+
+    this.bookid = this.activatedroute.snapshot.paramMap.get("bookId"); // we are getting/storing bookid by using activated route part and not by using local storage as done and commented above
+    console.log(this.bookid);
+
     this.getbook();
   }
   getbook(){

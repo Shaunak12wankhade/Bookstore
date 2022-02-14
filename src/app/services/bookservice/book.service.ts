@@ -45,4 +45,35 @@ export class BookService {
     }
    return this.httpService.postService('add_wish_list/'+ productID,{}, true,header ) 
   }
+
+  usergetcartlist(){
+     
+    let header= {
+      headers: new HttpHeaders({
+        'Content-Type':'application/json',
+        'x-access-token':this.token
+      })
+    }
+   return this.httpService.getService('get_cart_items', true,header )
+   }
+
+   userupdatequantity(productID:any, req:any){
+    let header= {
+      headers: new HttpHeaders({
+        'Content-Type':'application/json',
+        'x-access-token':this.token    // use x-acces-token instead of authorization as it is coming from backend otherwise it will throw error
+      })
+    }
+   return this.httpService.putService('/cart_item_quantity/'+ productID, req, true,header )  
+   }
+
+   userremovecartitem(productID:any){
+    let header= {
+      headers: new HttpHeaders({
+        'Content-Type':'application/json',
+        'x-access-token':this.token    // use x-acces-token instead of authorization as it is coming from backend otherwise it will throw error
+      })
+    }
+    return this.httpService.deleteService('/remove_cart_item/ + productID',{}, true,header)
+   }
 }

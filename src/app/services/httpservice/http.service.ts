@@ -19,4 +19,14 @@ export class HttpService {
     // console.log(data)
     return this.http.get(this.baseurl+url,token && httpOptions)
    }
+
+   putService(url:any, data:any, token:boolean=false, httpOptions:any){   // here data:any is used in context of whatever data we are sending to backend through post operation
+    console.log(data)
+    return this.http.put(this.baseurl+url, data, token && httpOptions)
+   }
+
+   deleteService(url:any, data:any, token:boolean=false, httpOptions:any){   // here data:any is used in context of whatever data we are sending to backend through post operation
+    console.log(data)
+    return this.http.delete(this.baseurl+url,token && httpOptions)
+   }
 }

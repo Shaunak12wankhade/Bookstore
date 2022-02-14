@@ -1,9 +1,193 @@
-.cartcount{
-    margin-left: 134px; 
-    // margin-top: 45px;
+// .cartcount{
+//     margin-left: 134px; 
+//     // margin-top: 45px;
+// }
+
+// .count{ 
+//     margin-left: 10px;
+//     font-size: 15px;
+//     opacity: 0.6;
+// }
+
+.section{
+    margin-bottom: 2%;
+    // border: 1px solid red;
+    // width: 50%;
+    // margin-left: 25%;
+    // margin-top: 10%;
+    // margin-right: 40%;
+    width: 750px ;
+    height: 330px;
+
+}
+.cartbook{
+    // border: 1px solid green;
+    width: 160%;
+    margin-left: -46%;
+    
+
+}
+.image{
+    
+
+}
+.bookImage{
+    // border: 1px solid yellow;
+    height: 95px;
+    width: 80px;
+    // margin-top: 20%;   
+    // left: 213px;
+    // width: 65px;
+    // height: 85px;
+
+}
+.entirebook{
+    // border: 1px solid black;
+    margin-top: -2%;
+    margin-left: 10%;
+   
+
+}
+.bookname{
+    margin-left: 15px;
+    font-family: Roboto;
+    font-weight: 500; 
+    margin-top: 8px;
+    font-size: 18px;
+    margin-bottom: 5px;
+
+}
+.author{
+    font-size: 12px; 
+     color: grey; 
+     margin-left: 15px;
+     margin-bottom: 5px;
+
+}
+.price{
+    font-size: 15px;
+     margin-left: 15px;
+     margin-bottom: 10%;
+
+}
+.discountprice{
+    font-weight: 620;
+
+}
+.originalprice{
+    color: grey;
+
 }
 
-.count{ margin-left: 10px;
-font-size: 15px;
-opacity: 0.6;
+.quantity{
+    // border: 1px solid palevioletred;
+    position: relative;
+    left: 10px;
+
 }
+.negativebutton{
+    background-color: white; 
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+}
+.negative{
+    color: lightgrey;
+    position: relative;
+    top: -10px;
+
+}
+.bookquantity{
+    font-size: 15px;
+    border: 1px solid whitesmoke;
+    // height: 25px;
+    // width: 40px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    text-align: center;
+
+    width: 40px;
+    height: 23px;
+
+}
+.positivebutton{
+    background-color: white; 
+    margin-left: 10px;
+    width: 24px;
+    height: 24px;
+
+}
+.positive{
+    color: black;
+    position: relative;
+    top: -10px;
+
+}
+.remove{
+    margin-left: 15px;
+    font-size: 15px;
+    font-family: Lato;
+    cursor: pointer;
+
+}
+.rightdiv{
+    // border: 1px solid yellow;
+    // margin-top: -50px;
+    // margin-left: 100px;
+    margin-right: 5%;
+}
+.location{
+    border: 1px solid lightgrey;
+     height: 30px;
+     width: 200px;
+     margin-top: 10px;
+     position: relative;
+     top: -60px;
+     left: 110px;
+
+}
+.placeIcon{
+    color: darkred;
+
+}
+.loc{
+    margin-top: 3px;
+
+}
+.button{
+    width: 150px;
+    position: relative;
+    top: -60px;
+    left: 127px;
+}
+.example-headers-align .mat-expansion-panel-header-title,
+ .example-headers-align .mat-expansion-panel-header-description {
+   flex-basis: 0;
+ }
+ 
+ .example-headers-align .mat-expansion-panel-header-description {
+   justify-content: space-between;
+   align-items: center;
+   
+ }
+ 
+ .example-headers-align .mat-form-field + .mat-form-field {
+   margin-left: 8px;
+ }
+ .mat-expansion-panel{
+    //  border:1px solid blue;
+    //  margin-top: 20px;
+     width: 780px ;
+     margin-left: 330px;
+     position: relative;
+     top: 120px; 
+
+
+ }
+//  .panel1{
+//     border:2px solid purple;
+//     width: 800px ;
+//     margin-left: 330px;
+//     // margin-top: 100px; 
+//     position: relative;
+//     top: 120px; 
+//  }
