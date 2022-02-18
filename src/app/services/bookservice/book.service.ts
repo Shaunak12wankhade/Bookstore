@@ -7,8 +7,8 @@ import { HttpService } from '../httpservice/http.service';
 })
 export class BookService {
   token:any;
-
-  constructor(private httpService: HttpService) {
+  
+  constructor(private httpService: HttpService) { // Here we create the object of http service in constructor because we are declaring our base url in httpservice.ts so by doing this we are accesing our base url in bookservice.ts
     this.token=localStorage.getItem("token")  // this token is taken from backend that is generated & stored in our local storage after we login & we are setting this token in our login.ts as localstorage.setitems
    }
  
@@ -64,7 +64,7 @@ export class BookService {
         'x-access-token':this.token    // use x-acces-token instead of authorization as it is coming from backend otherwise it will throw error
       })
     }
-   return this.httpService.putService('/cart_item_quantity/'+ productID, req, true,header )  
+   return this.httpService.putService('cart_item_quantity/'+ productID, req, true,header )  
    }
 
    userremovecartitem(productID:any){
@@ -74,6 +74,56 @@ export class BookService {
         'x-access-token':this.token    // use x-acces-token instead of authorization as it is coming from backend otherwise it will throw error
       })
     }
-    return this.httpService.deleteService('/remove_cart_item/ + productID',{}, true,header)
+    return this.httpService.deleteService('remove_cart_item/' + productID,{}, true,header)
+   }
+
+   usercheckout(data:any){
+    let header= {
+      headers: new HttpHeaders({
+        'Content-Type':'application/json',
+        'x-access-token':this.token
+      })
+    }
+   return this.httpService.postService('add_wish_list/',data, true,header ) 
+   }
+
+   userwishlist(){
+    let header= {
+      headers: new HttpHeaders({
+        'Content-Type':'application/json',
+        'x-access-token':this.token
+      })
+    }
+   return this.httpService.getService('get_wishlist_items', true,header )
+   }
+
+   userremovewishlistitem(productID:any){
+    let header= {
+      headers: new HttpHeaders({
+        'Content-Type':'application/json',
+        'x-access-token':this.token    // use x-acces-token instead of authorization as it is coming from backend otherwise it will throw error
+      })
+    }
+    return this.httpService.deleteService('remove_wishlist_item/' + productID,{}, true,header)
+   }
+
+   useraddfeedback(productID:any, data:any ){
+    let header= {
+      headers: new HttpHeaders({
+        'Content-Type':'application/json',
+        'x-access-token':this.token    // use x-acces-token instead of authorization as it is coming from backend otherwise it will throw error
+      })
+    }
+    return this.httpService.postService('add/feedback/' + productID,data, true,header)
+   }
+
+   usergetfeedback(productID:any){
+    let header= {
+      headers: new HttpHeaders({
+        'Content-Type':'application/json',
+        'x-access-token':this.token
+      })
+    }
+   return this.httpService.getService('get/feedback/' + productID, true,header )
    }
 }

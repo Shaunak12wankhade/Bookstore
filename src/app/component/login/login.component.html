@@ -25,6 +25,17 @@
             <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
                 <div class="form">
 
+                    <div style=" margin-top: -30px;">
+                        <mat-form-field  style="height: 38px;">
+                            <mat-label>Select an option</mat-label>
+                            <mat-select formControlName="selectoption" disableRipple>
+                              <mat-option value="1">User</mat-option>
+                              <mat-option value="2">Admin</mat-option>
+                              <!-- <mat-option value="3">Option 3</mat-option> -->   
+                            </mat-select>
+                          </mat-form-field>
+                    </div>
+
                     <div class="email">
                         <div>
                             <mat-label>Email Id</mat-label>
@@ -63,6 +74,26 @@
                     <div>
                         <button class="signupbutton"  mat-flat-button>Login</button>
                     </div>
+                    
+                    <!-- <div>
+                        <button [matMenuTriggerFor]="menu" class="signupbutton"  mat-flat-button>
+                            User/Admin
+                            
+                        </button>
+                        <mat-menu class="matmenu" #menu="matMenu">
+                            <button  class="userbutton" mat-menu-item>
+                                UserLogin
+                                
+                            </button>
+
+                            <button  class="adminbutton" mat-menu-item
+                            >AdminLogin
+                               
+                            </button>
+
+                        </mat-menu>
+
+                    </div> -->
 
                     <div class="or">
                         <h2>OR</h2>
@@ -81,6 +112,7 @@
 
                 </div>
             </form>
+
         <!-- </div> -->
     </mat-card>
 

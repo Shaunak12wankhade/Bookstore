@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminComponent } from './component/admin/admin.component';
 import { AuthenticationGuard } from './component/authentication.guard';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { GetallbooksComponent } from './component/getallbooks/getallbooks.component';
 import { GetcartComponent } from './component/getcart/getcart.component';
+import { GetwishlistComponent } from './component/getwishlist/getwishlist.component';
 import { LoginComponent } from './component/login/login.component';
+import { OrderplacedsuccessfullyComponent } from './component/orderplacedsuccessfully/orderplacedsuccessfully.component';
 import { QuickviewComponent } from './component/quickview/quickview.component';
 import { SignupComponent } from './component/signup/signup.component';
 
@@ -20,6 +23,9 @@ const routes: Routes = [
    { path:'getallbooks',component:GetallbooksComponent},
    { path:'quickview/:bookId',component:QuickviewComponent},  // we are giving /:book._id just for setting path for getting particular book by its id and we can give any name instead of book._id
    { path:'getcart',component:GetcartComponent},
+   { path:'getwishlist',component:GetwishlistComponent},
+   { path:'orderplacedsuccessfully',component:OrderplacedsuccessfullyComponent},
+   { path:'admin',component:AdminComponent}
   ]},
   
 ];

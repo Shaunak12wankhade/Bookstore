@@ -26,6 +26,11 @@ import { QuickviewComponent } from './component/quickview/quickview.component';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { GetcartComponent } from './component/getcart/getcart.component';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {MatRadioModule} from '@angular/material/radio';
+import { GetwishlistComponent } from './component/getwishlist/getwishlist.component';
+import { OrderplacedsuccessfullyComponent } from './component/orderplacedsuccessfully/orderplacedsuccessfully.component';
+import {MatMenuModule} from '@angular/material/menu';
+import { AdminComponent } from './component/admin/admin.component';
 
 
 @NgModule({
@@ -36,7 +41,10 @@ import {MatExpansionModule} from '@angular/material/expansion';
     DashboardComponent,
     GetallbooksComponent,
     QuickviewComponent,
-    GetcartComponent
+    GetcartComponent,
+    GetwishlistComponent,
+    OrderplacedsuccessfullyComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
@@ -56,7 +64,9 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatToolbarModule,
     MatIconModule,
     NgxPaginationModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatRadioModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

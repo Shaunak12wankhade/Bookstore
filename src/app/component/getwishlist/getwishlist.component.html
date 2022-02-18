@@ -1,0 +1,155 @@
+<div class="section" fxLayout="column">
+
+    <mat-card class="wishlist" fxLayoutAlign="start center">
+        <span>My Wishlist ({{countlist}})</span>
+    </mat-card>
+
+    <mat-card class="book" fxLayout="row" fxLayoutAlign="start center" *ngFor="let book of wishlistitem">
+        
+        <div fxLayout="column" fxLayoutGap="20px">
+            <div class="cartbook" fxLayout="row" fxLayoutAlign="start center" >
+                
+                <div>
+                    <div class="image" fxLayoutAlign="start center">
+                        <img class="bookImage" src="../../../assets/Image 11@2x.png">
+                    </div>
+                </div>
+
+                <div class="entirebook" fxLayout="column" fxLayout.sm="column">
+
+                    <div class="bookname">
+                        {{book.product_id.bookName}}
+                    </div>
+                    <div class="author">
+                        by {{book.product_id.author}}
+                    </div>
+                    <div class="price" fxLayout="row" fxLayoutGap="10px">
+                        <div class="discountprice">
+                            Rs.{{book.product_id.discountPrice}}
+                        </div>
+                        <div class="originalprice">
+                            <del> Rs.{{book.product_id.price}} </del>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="rightdiv" fxLayout="column" fxLayoutAlign="end center">
+                
+            <img class="deleteimg" (click)="removewishlistitem(book)" src="../../../assets/delete_black_24dp (1).svg" >
+           
+        </div>
+
+    </mat-card>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<div class="section">
+    <div fxLayout="row" fxLayoutAlign="center center">
+        <div fxLayout="column" fxLayoutGap="20px">
+            <div class="cartbook" fxLayout="row" fxLayout="start center" *ngFor="let book of wishlistitem">
+                <div>
+                    <div class="image" fxLayoutAlign="start center">
+                        <img class="bookImage" src="../../../assets/Image 11@2x.png">
+                    </div>
+                </div>
+
+                <div class="entirebook" fxLayout="column" fxLayout.sm="column">
+
+                    <div class="bookname">
+                        {{book.product_id.bookName}}
+                    </div>
+                    <div class="author">
+                        by {{book.product_id.author}}
+                    </div>
+                    <div class="price" fxLayout="row" fxLayoutGap="10px">
+                        <div class="discountprice">
+                            Rs.{{book.product_id.discountPrice}}
+                        </div>
+                        <div class="originalprice">
+                            <del> Rs.{{book.product_id.price}} </del>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="rightdiv" fxLayout="column" fxLayoutAlign="space-between center">
+                
+            <img class="deleteimg" src="../../../assets/delete_black_24dp (1).svg">
+           
+        </div>
+
+    </div>
+
+</div>  -->

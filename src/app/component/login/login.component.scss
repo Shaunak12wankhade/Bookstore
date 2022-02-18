@@ -155,3 +155,39 @@ h2{
     width: 122px;
     background-color: transparent;
 }
+
+::ng-deep .mat-menu-panel.matmenu{
+    // border: 1px solid red;
+    width: 300px;
+    height: 140px;
+    // position: fixed;
+    // position: relative;
+    // left: 150px;
+    // margin-top: -15px;
+    float: none;
+    
+}
+
+.userbutton{
+    width: 275px;
+    background-color: brown;
+    color: white;
+    text-align: center;
+    // position: relative;
+    // top: 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+
+}
+
+.adminbutton{
+    width: 275px;
+    background-color: brown;
+    color: white;
+    text-align: center;
+    position: relative;
+    // top: 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+
+}

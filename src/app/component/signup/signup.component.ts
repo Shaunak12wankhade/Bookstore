@@ -21,6 +21,7 @@ export class SignupComponent implements OnInit {
       email: ['', Validators.required],
       password: ['', Validators.required],
       mobileNo: ['', Validators.required],
+      selectoption: ['', Validators.required],
       // service: ['advance', Validators.required]
     })
   }
@@ -40,9 +41,15 @@ export class SignupComponent implements OnInit {
         // service: this.signupForm.value.service
 
       }
+      if(this.signupForm.value.selectoption == '1') { 
       this.user.userSignup(payload).subscribe((response: any) => {    //subscribe is a method from observable
         console.log(response)
       })
+    }else if(this.signupForm.value.selectoption == '2') {
+      this.user.adminsignup(payload).subscribe((response: any) => {    //subscribe is a method from observable
+        console.log(response)
+      })
+    }
     } else {
       console.log("enter data");
     }

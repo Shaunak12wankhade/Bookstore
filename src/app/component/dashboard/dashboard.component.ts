@@ -15,4 +15,18 @@ export class DashboardComponent implements OnInit {
  bookstore(){
    this.route.navigateByUrl("/dashboard/getallbooks")
  }
+
+ cart(){
+  this.route.navigateByUrl("/dashboard/getcart")
+ }
+
+ wishlist(){
+  this.route.navigateByUrl("/dashboard/getwishlist")
+ }
+
+ 
+ Logout(){
+  localStorage.clear();
+  this.route.navigateByUrl('/login')
+}
 }

@@ -14,11 +14,30 @@
             <img class="searchimg" src="../../../assets/search_black_24dp (1).svg" alt="">
             <input class="search1" type="text" name="search" placeholder="search..." fxHide.xs fxHide.sm>
         </mat-card>
-        <div class="profile" fxLayout="column" fxLayoutAlign="center center" fxLayout.xs="row" fxFlex.xs="50">
+
+        <div class="profile" [matMenuTriggerFor]="menu" fxLayout="column" fxLayoutAlign="center center" fxLayout.xs="row" fxFlex.xs="50">
             <img class="profileimg" src="../../../assets/person_white_24dp.svg" alt="">
             <p>Profile</p>
+
+            <mat-menu class="matmenu"  #menu="matMenu">
+                <div fxLayout="column" fxLayoutGap="3px">
+                    <h3 class="welcometext">Welcome</h3>
+                    <h5 class="logouttext">To Logout account</h5>
+
+                </div>
+               
+                <button (click)="Logout()" class="logoutbutton" mat-menu-item>
+                    Log Out
+                </button>
+                <button class="wishlistbutton" (click)=" wishlist()" mat-menu-item fxLayoutGap="0px">
+                    <mat-icon class="wishlistIcon">favorite</mat-icon>
+                    Wishlist
+                </button>
+
+            </mat-menu>
         </div>
-        <div class="cart" fxLayout="column" fxLayoutAlign="center center" fxLayout.xs="row" fxFlex.xs="50">
+
+        <div class="cart" (click)="cart()" fxLayout="column" fxLayoutAlign="center center" fxLayout.xs="row" fxFlex.xs="50">
             <img class="cartimg" src="../../../assets/shopping_cart_white_24dp.svg" alt="">
             <p>Cart</p>
         </div>

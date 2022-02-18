@@ -1,0 +1,36 @@
+.section{
+
+}
+.placeorder{
+
+}
+.orderimg{
+    width: 200px;
+    height: 200px;
+    margin-top: 90px;
+    margin-left: 590px;
+    // align-items: center;
+
+}
+p{
+    text-align: center;
+    font: normal normal normal 18px/22px Lato;
+    color: #333232;
+    opacity: 1;
+}
+
+table,tr, td {
+    border: 1px solid lightgray;
+}
+
+th{
+    background-color: whitesmoke;
+}
+
+.continuebutton{
+    margin-top: 40px;
+    margin-left: 590px;
+    width: 200px;
+    text-align: center;
+    justify-content: center;
+}

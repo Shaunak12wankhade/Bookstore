@@ -19,6 +19,7 @@ export class LoginComponent implements OnInit {
     this.loginForm = this.formbuilder.group({
       email: ['', Validators.required],
       password: ['', Validators.required],
+      selectoption: ['', Validators.required],
      
     })
   }
@@ -35,15 +36,36 @@ export class LoginComponent implements OnInit {
         password: this.loginForm.value.password
        
       }
+
+      if(this.loginForm.value.selectoption == '1') {
       this.user.userlogin(payload).subscribe((response: any) => {    //subscribe is a method from observable
         console.log(response)
         localStorage.setItem('token', response.result.accessToken);  // this accessToken is coming from swagger
         this.route.navigateByUrl("/dashboard")
+
+        // this.route.navigateByUrl("/dashboard/admin")
       })
+    }else if(this.loginForm.value.selectoption == '2') {
+      this.user. adminlogin(payload).subscribe((response: any) => {    //subscribe is a method from observable
+        console.log(response)
+        localStorage.setItem('token', response.result.accessToken);  // this accessToken is coming from swagger
+        this.route.navigateByUrl("/dashboard/admin")
+      })
+    }
     } else {
       console.log("enter data");
     }
+
+    
   }
+
+  // userlogin(){
+  //   this.route.navigateByUrl("/dashboard")
+  // }
+
+  // adminlogin(){
+  //   this.route.navigateByUrl("/dashboard/admin")
+  // }
 
 
 }

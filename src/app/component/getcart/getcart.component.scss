@@ -149,14 +149,14 @@
     color: darkred;
 
 }
-.loc{
+.currentlocation{
     margin-top: 3px;
 
 }
 .button{
     width: 150px;
-    position: relative;
-    top: -60px;
+    // position: relative;
+    // top: -60px;
     left: 127px;
 }
 .example-headers-align .mat-expansion-panel-header-title,
@@ -172,14 +172,17 @@
  
  .example-headers-align .mat-form-field + .mat-form-field {
    margin-left: 8px;
+   
  }
  .mat-expansion-panel{
     //  border:1px solid blue;
     //  margin-top: 20px;
      width: 780px ;
-     margin-left: 330px;
+     margin-left: 200px;
      position: relative;
-     top: 120px; 
+     top: 120px;
+    
+    
 
 
  }
@@ -191,3 +194,91 @@
 //     position: relative;
 //     top: 120px; 
 //  }
+
+.customerdetails{
+
+}
+.details{
+    // margin-right: 20px;
+    margin-bottom: 20px;
+    // border: 1px solid blue;
+    margin-left: 30px;
+
+}
+.heading{
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: -28px;
+
+}
+.names{
+    font-size: 15px;
+    font-weight: 500;
+
+}
+.type{
+    margin-left: 30px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+.home{
+    margin-left: 30px;
+
+}
+.work{
+    margin-left: 100px;
+
+}
+.other{
+    margin-left: 100px;
+
+}
+.address{
+    border: 1px solid darkred;
+    color: darkred;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 40px;
+    width: 180px;
+    position: relative;
+    left: 100px;
+}
+.continuebutton{
+    width: 150px;
+    margin-left: 15px;
+    position: relative;
+    top: 170px;
+    left: 95px;
+}
+.addressandcontinue{
+    // border: 1px solid green;
+    position: relative;
+ // top: -455px;
+    bottom: 420px;
+    left: 310px;
+}
+// .panel2{
+//     height: 700px;
+// }
+
+.maindivofform{
+    // border: 1px solid blue;
+}
+.mat-form-field{
+    // border: 1px solid red
+}
+.input{
+    // border: 1px solid yellow
+}
+
+.checkoutbutton{
+    background-origin: 1px solid green;
+    width: 150px;
+    position: relative;
+    left: 130px;
+    top: 200px;
+    margin-left: 50px;
+}
