@@ -31,7 +31,7 @@
 .entirebook{
     border: 1px solid gainsboro;
     width: 250px;
-    height: 320px;
+    height: 350px;
     // margin-right: 65%;
     margin: 20px;
 }
@@ -49,7 +49,8 @@
     width: 110px;
     height: 140px;
     margin-left: 70px;
-    margin-top: 30px;
+    margin-top: 35px;
+    cursor: pointer;
 }
 .bookname{
     margin-left: 15px;
@@ -99,3 +100,37 @@
     background: brown;
   }
   
+
+.cartandwishlistbutton{
+  margin-top: -20px;
+  margin-left: 5px;
+  // position: sticky;
+    
+
+}
+.addtobag{
+    // background: brown; 
+    color: rgba(255, 255, 255, 0.767); 
+    // color: black;
+    width: 100%;
+    cursor: pointer;
+    // border: 1px solid gainsboro; 
+
+}
+.cartimg{
+  color: black;
+}
+.wishlist{
+    // background: black; 
+    color: rgba(255, 255, 255, 0.767); 
+    width: 95%;
+    cursor: pointer;
+    // border: 1px solid gainsboro;   
+
+}
+.wishlistIcon{
+  color: black;
+}
+.wishlistIcon:hover{
+  color: red;
+}

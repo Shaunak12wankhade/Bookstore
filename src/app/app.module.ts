@@ -31,6 +31,8 @@ import { GetwishlistComponent } from './component/getwishlist/getwishlist.compon
 import { OrderplacedsuccessfullyComponent } from './component/orderplacedsuccessfully/orderplacedsuccessfully.component';
 import {MatMenuModule} from '@angular/material/menu';
 import { AdminComponent } from './component/admin/admin.component';
+import { SearchbookPipe } from './component/pipe/searchbook.pipe';
+import {MatBadgeModule} from '@angular/material/badge';
 
 
 @NgModule({
@@ -44,7 +46,8 @@ import { AdminComponent } from './component/admin/admin.component';
     GetcartComponent,
     GetwishlistComponent,
     OrderplacedsuccessfullyComponent,
-    AdminComponent
+    AdminComponent,
+    SearchbookPipe
   ],
   imports: [
     BrowserModule,
@@ -66,7 +69,8 @@ import { AdminComponent } from './component/admin/admin.component';
     NgxPaginationModule,
     MatExpansionModule,
     MatRadioModule,
-    MatMenuModule
+    MatMenuModule,
+    MatBadgeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -21,7 +21,7 @@ const routes: Routes = [
   children:[
    { path:'', redirectTo:"/dashboard/getallbooks", pathMatch:'full'},
    { path:'getallbooks',component:GetallbooksComponent},
-   { path:'quickview/:bookId',component:QuickviewComponent},  // we are giving /:book._id just for setting path for getting particular book by its id and we can give any name instead of book._id
+   { path:'quickview/:bookId',component:QuickviewComponent},  // we are giving /:bookId just for setting path for getting particular book by its id and we can give any name instead of book._id and is used in quick view.ts getbook()
    { path:'getcart',component:GetcartComponent},
    { path:'getwishlist',component:GetwishlistComponent},
    { path:'orderplacedsuccessfully',component:OrderplacedsuccessfullyComponent},

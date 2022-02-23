@@ -41,24 +41,24 @@
         <div class="entirebook" fxLayout="column" fxLayout.sm="column"  >
     
             <div class="bookname">
-                {{bookdata.bookName}}
+                {{bookdata?.bookName}}  <!--this ? means if bookName is available then it will show that data in console and browser otherwise it will return null -->
             </div>
             <div class="author">
-             by {{bookdata.author}}
+             by {{bookdata?.author}}
             </div>
             <div class="rating"  fxLayoutAlign="space-evenly center">
                 4.5<img class="Star" src="../../../assets/star_white_24dp.svg" alt="">
             </div>
             <div class="quantity">
-                ({{bookdata.quantity}})
+                ({{bookdata?.quantity}})
             </div>
     
             <div class="price" fxLayout="row" fxLayoutGap="10px" >
                 <div class="discountprice">
-                    Rs.{{bookdata.discountPrice}}
+                    Rs.{{bookdata?.discountPrice}}
                 </div>
                 <div class="originalprice">
-                    <del> Rs.{{bookdata.price}} </del>
+                    <del> Rs.{{bookdata?.price}} </del>
                 </div>
             </div>
     

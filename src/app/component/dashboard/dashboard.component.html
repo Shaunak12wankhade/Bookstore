@@ -12,20 +12,22 @@
 
         <mat-card class="searchbar" fxLayout="row" fxLayout.xs="row">
             <img class="searchimg" src="../../../assets/search_black_24dp (1).svg" alt="">
-            <input class="search1" type="text" name="search" placeholder="search..." fxHide.xs fxHide.sm>
+            <input class="search1" type="text" name="search" placeholder="search..." [(ngModel)]="filteredString"
+                fxHide.xs fxHide.sm>
         </mat-card>
 
-        <div class="profile" [matMenuTriggerFor]="menu" fxLayout="column" fxLayoutAlign="center center" fxLayout.xs="row" fxFlex.xs="50">
+        <div class="profile" [matMenuTriggerFor]="menu" fxLayout="column" fxLayoutAlign="center center"
+            fxLayout.xs="row" fxFlex.xs="50">
             <img class="profileimg" src="../../../assets/person_white_24dp.svg" alt="">
             <p>Profile</p>
 
-            <mat-menu class="matmenu"  #menu="matMenu">
+            <mat-menu class="matmenu" #menu="matMenu">
                 <div fxLayout="column" fxLayoutGap="3px">
                     <h3 class="welcometext">Welcome</h3>
                     <h5 class="logouttext">To Logout account</h5>
 
                 </div>
-               
+
                 <button (click)="Logout()" class="logoutbutton" mat-menu-item>
                     Log Out
                 </button>
@@ -37,9 +39,14 @@
             </mat-menu>
         </div>
 
-        <div class="cart" (click)="cart()" fxLayout="column" fxLayoutAlign="center center" fxLayout.xs="row" fxFlex.xs="50">
-            <img class="cartimg" src="../../../assets/shopping_cart_white_24dp.svg" alt="">
+        <div class="cart" (click)="cart()" fxLayout="column" fxLayoutAlign="center center" fxLayout.xs="row"
+            fxFlex.xs="50">
+
+            <button style="background-color: darkred; border: none; cursor: pointer;" matBadge={{badgecount}} matBadgePosition="after" matBadgeColor="warn">
+                <img class="cartimg" src="../../../assets/shopping_cart_white_24dp.svg" alt="">
+            </button>
             <p>Cart</p>
+
         </div>
 
     </mat-toolbar-row>

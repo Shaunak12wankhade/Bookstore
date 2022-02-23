@@ -108,10 +108,10 @@ export class GetcartComponent implements OnInit {
   }
 
   ordersummary() {
-    this.cartbooks.forEach((element: any) => {
+    this.cartbooks.forEach((element: any) => {  //whatever data we have inside cartBooks we are assigning to element by using forEach 
       console.log(element);
       this.orderlist.push({     // push method adds the element at the end of an array
-        "product_id": element.product_id._id,
+        "product_id": element.product_id._id,  // here we are accessing the particular product id's id, bookname, quantity, price from element(where tha data of all books is stored)
         "product_name": element.product_id.bookName,
         "product_quantity": element.product_id.quantityToBuy,
         "product_price": element.product_id.price

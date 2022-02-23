@@ -48,6 +48,26 @@
             </div>
         </div>
 
+        <div class="cartandwishlistbutton" fxLayout="row" fxLayoutGap="5px" fxLayoutAlign="space-evenly center">
+            <div>
+                <!-- <button mat-raised-button class="addtobag" (click)="addtocart()" >
+                    ADD TO BAG
+                </button> -->
+
+                <button class="addtobag" (click)="addtocart(book)"> 
+                <img class="cartimg" src="../../../assets/shopping_cart_black_24dp.svg" alt=""></button>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="start center">
+                <!-- <button mat-flat-button class="wishlist" (click)="addtowishlist()" >
+                    <mat-icon class="wishlistIcon">favorite</mat-icon>
+                    WISHLIST
+                </button> -->
+
+                <button class="wishlist" (click)="addtowishlist(book)"> <mat-icon class="wishlistIcon">favorite</mat-icon></button>
+            </div>
+
+        </div>
+
     </div>
 
     <div >

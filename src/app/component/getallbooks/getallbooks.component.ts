@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { BookService } from 'src/app/services/bookservice/book.service';
 
 @Component({
@@ -14,19 +14,29 @@ export class GetallbooksComponent implements OnInit {
   totalLength:any;
   page:number = 1;
 
-  constructor( private books:BookService, private route:Router) { }
+  bookid:any;  // used as a variable to store book id's used in activated route part below
+
+  constructor( private books:BookService,private activatedroute: ActivatedRoute, private route:Router) { }
 
   ngOnInit(): void {
+
+    this.bookid = this.activatedroute.snapshot.paramMap.get("bookId"); // we are getting/storing bookid by using activated route part and not by using local storage as done and commented above
+    console.log(this.bookid);
+
     this.getallbooks();
   }
   
   getallbooks(){
-    this.books.usergetallbooks().subscribe((response:any)=>{
+    
+      this.books.usergetallbooks().subscribe((response:any)=> {
       console.log(response.result);
       this.allbooks= response.result
 
       this.countbooks=response.result.length  //.length is used because the count of number of books is stored inside length we can see that in console at the endof the books array length:20 is written
       this.totalLength=response.result.length  // done for pagination part
+      
+      // localStorage.setItem('bookId', book._id);
+      
     })
   }
 
@@ -36,5 +46,21 @@ export class GetallbooksComponent implements OnInit {
     this.route.navigateByUrl('/dashboard/quickview/' + book._id) //due to this after clicking on any book image in getallbooks we will be redirected to the quickview of that particular book 
     
 
+  }
+
+  
+  addtocart(book:any){
+    this.books.useraddtobag(book._id).subscribe((response:any) =>{
+      console.log(response);
+      
+    })
+    this.route.navigateByUrl('/dashboard/getcart' )
+  }
+  addtowishlist(book:any){
+    this.books.useraddtowishlist(book._id).subscribe((response:any) =>{
+      console.log(response);
+      
+    })
+    this.route.navigateByUrl('/dashboard/getwishlist')
   }
 }

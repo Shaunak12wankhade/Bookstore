@@ -37,19 +37,22 @@ export class LoginComponent implements OnInit {
        
       }
 
-      if(this.loginForm.value.selectoption == '1') {
+      if(this.loginForm.value.selectoption == '1') {  // this selectoption is coming from login.html from formControlName and is used to select whether user wants to login or admin wants to login
       this.user.userlogin(payload).subscribe((response: any) => {    //subscribe is a method from observable
         console.log(response)
-        localStorage.setItem('token', response.result.accessToken);  // this accessToken is coming from swagger
-        this.route.navigateByUrl("/dashboard")
+        
+        localStorage.setItem('token', response.result.accessToken);  // this accessToken is coming from swagger and we can see inside console also
+
+        this.route.navigateByUrl("/dashboard")  //by doing this after clicking on login button we will get redirected to dashboard
 
         // this.route.navigateByUrl("/dashboard/admin")
       })
-    }else if(this.loginForm.value.selectoption == '2') {
+    }else if(this.loginForm.value.selectoption == '2') { // this selectoption is coming from login.html from formControlName and is used to select whether user wants to login or admin wants to login 
       this.user. adminlogin(payload).subscribe((response: any) => {    //subscribe is a method from observable
         console.log(response)
         localStorage.setItem('token', response.result.accessToken);  // this accessToken is coming from swagger
-        this.route.navigateByUrl("/dashboard/admin")
+
+        this.route.navigateByUrl("/dashboard/admin") //by doing this after clicking on login button we will get redirected to admin dashboard
       })
     }
     } else {

@@ -1,1 +1,33 @@
-<p>admin works!</p>
+<div class="entiretable" fxLayoutAlign="center center">
+    <table class="table">
+        <tr>
+            <th>Sr.No</th>
+            <th>BookImage</th>
+            <th>BookName</th>
+            <th>Author</th>
+            <th>description</th>
+            <th>Price</th>
+            <th>DiscountPrice</th>
+            <th>Quantity</th>
+            <th>Action</th>
+        </tr>
+        <tr *ngFor="let book of allbooks" >
+            <td>{{count}}</td>
+            <td> <img class="img1" src="../../../assets/Image 11@2x.png" alt=""></td>
+            <td>{{book.bookName}}</td>
+            <td>{{book.author}}</td>
+            <td>{{book.description}}</td>
+            <td>{{book.price}}</td>
+            <td>{{book.discountPrice}}</td>
+            <td>{{book.quantity}}</td>
+            <td class="buttons" fxLayoutAlign="space-around center" fxLayout="row" fxLayoutGap="15px" >
+                <button class="updatebutton"> Update</button>
+                <button class="deletebutton">Delete</button>
+            </td>
+            
+           
+            
+        </tr>
+    </table>
+
+</div>
