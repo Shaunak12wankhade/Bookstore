@@ -33,6 +33,8 @@ import {MatMenuModule} from '@angular/material/menu';
 import { AdminComponent } from './component/admin/admin.component';
 import { SearchbookPipe } from './component/pipe/searchbook.pipe';
 import {MatBadgeModule} from '@angular/material/badge';
+import { AdminAddandupdateComponent } from './component/admin-addandupdate/admin-addandupdate.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
@@ -47,7 +49,8 @@ import {MatBadgeModule} from '@angular/material/badge';
     GetwishlistComponent,
     OrderplacedsuccessfullyComponent,
     AdminComponent,
-    SearchbookPipe
+    SearchbookPipe,
+    AdminAddandupdateComponent
   ],
   imports: [
     BrowserModule,
@@ -70,7 +73,8 @@ import {MatBadgeModule} from '@angular/material/badge';
     MatExpansionModule,
     MatRadioModule,
     MatMenuModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

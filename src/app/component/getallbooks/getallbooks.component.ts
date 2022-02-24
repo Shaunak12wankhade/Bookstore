@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { BookService } from 'src/app/services/bookservice/book.service';
+import { DataService } from 'src/app/services/dataservice/data.service';
 
 @Component({
   selector: 'app-getallbooks',
@@ -15,15 +16,30 @@ export class GetallbooksComponent implements OnInit {
   page:number = 1;
 
   bookid:any;  // used as a variable to store book id's used in activated route part below
+  
+  searchword: any;  // done for search pipe part
 
-  constructor( private books:BookService,private activatedroute: ActivatedRoute, private route:Router) { }
+  constructor( private books:BookService,private activatedroute: ActivatedRoute, private route:Router, private dataservice:DataService) { }
 
   ngOnInit(): void {
-
-    this.bookid = this.activatedroute.snapshot.paramMap.get("bookId"); // we are getting/storing bookid by using activated route part and not by using local storage as done and commented above
+   
+    this.bookid = this.activatedroute.snapshot.paramMap.get("bookId"); // we are getting/storing bookid by using activated route part and is done for addtocart and addto wishlist methods done below as sir asked to add cart and wishlist buttons below each book in getall books
     console.log(this.bookid);
 
-    this.getallbooks();
+     this.getallbooks();
+
+    
+    this.dataservice.receivedData.subscribe((response:any)=>{  // this received Data is coming from data service.ts for unrelated data sharing as our dashboard.ts and getall books dont have any relationship
+       console.log(response)
+     
+          // this.searchword = response;
+
+      // console.log(this.filteredString);
+      
+        //  this.getallbooks();
+      
+    });
+
   }
   
   getallbooks(){

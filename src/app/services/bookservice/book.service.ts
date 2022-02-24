@@ -126,4 +126,14 @@ export class BookService {
     }
    return this.httpService.getService('get/feedback/' + productID, true,header )
    }
+
+   adminaddbook(data:any){
+     let header={
+       headers: new HttpHeaders({
+        'content-Type':'application/json',
+        'x-access-token':this.token 
+       })
+     }
+     return this.httpService.postService('admin/add/book',data,true,header)
+   }
 }

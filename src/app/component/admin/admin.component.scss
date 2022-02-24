@@ -37,11 +37,21 @@ td{
 }
 
 .buttons{
-    border: 1px solid red;
+    // border: 1px solid red;
     justify-content: center;
     // margin-bottom: 10px;
     position: relative;
     bottom: 50px;
     border: none;
     // overflow-y:inherit;
+}
+
+.addbookbutton{
+    // border: 1px solid red;
+    margin-top: 305%;
+    position: relative;
+    right: 80%;
+}
+.addbutton{
+//    width:100px;
 }

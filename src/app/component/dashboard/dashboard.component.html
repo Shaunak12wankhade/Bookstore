@@ -12,8 +12,7 @@
 
         <mat-card class="searchbar" fxLayout="row" fxLayout.xs="row">
             <img class="searchimg" src="../../../assets/search_black_24dp (1).svg" alt="">
-            <input class="search1" type="text" name="search" placeholder="search..." [(ngModel)]="filteredString"
-                fxHide.xs fxHide.sm>
+            <input class="search1" type="text" name="search" placeholder="Search" #search (keyup)="clearFilter(search.value)" fxHide.xs fxHide.sm> <!--this (keyup) is used for data binding for search pipe part-->
         </mat-card>
 
         <div class="profile" [matMenuTriggerFor]="menu" fxLayout="column" fxLayoutAlign="center center"

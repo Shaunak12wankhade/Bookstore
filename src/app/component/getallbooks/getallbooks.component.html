@@ -1,14 +1,15 @@
-<div fxLayout="row" fxLayoutAlign="space-between center" fxLayout.sm="row" fxLayout.xs="row" >
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayout.sm="row" fxLayout.xs="row">
 
     <div class="bookandCount">
         <span class="books">Books</span>
-        <span class="count">({{countbooks}} items)</span> <!--we are just binding data using string interpolation between getallbooks.html and getaalbooks.ts --> 
+        <span class="count">({{countbooks}} items)</span>
+        <!--we are just binding data using string interpolation between getallbooks.html and getaalbooks.ts -->
     </div>
 
     <div class="sortbyrelevance">
         <mat-form-field appearance="outline">
             <mat-label>Sort by relevance</mat-label>
-            <mat-select class="matselect" >
+            <mat-select class="matselect">
                 <mat-option value="one">Price:Low to High</mat-option>
                 <mat-option value="two">Price:High to Low</mat-option>
                 <mat-option value="third">Newest Arrivals</mat-option>
@@ -18,10 +19,12 @@
 
 </div>
 
-<div  fxLayoutAlign="center center"  fxLayout="row wrap" fxLayoutGap="15px">
-    <div class="entirebook" *ngFor="let book of allbooks | paginate: { itemsPerPage: 8, currentPage: page, totalItems:totalLength } " fxLayout.sm="column">
+<div fxLayoutAlign="center center" fxLayout="row wrap" fxLayoutGap="15px">
+    <div class="entirebook"
+        *ngFor="let book of allbooks | searchbook:searchword | paginate: { itemsPerPage: 8, currentPage: page, totalItems:totalLength } "
+        fxLayout.sm="column">
 
-        <div class="bookimg" (click)="quickview(book)" >  <!-- this (book) is coming from ngFor (let book) as we are storing aur bookname, author etc in book -->
+        <div class="bookimg" (click)="quickview(book)"> <!-- this (book) is coming from ngFor (let book) as we are storing aur bookname, author etc in book -->
             <img class="img1" src="../../../assets/Image 11@2x.png" alt="">
         </div>
 
@@ -29,7 +32,7 @@
             {{book.bookName}}
         </div>
         <div class="author">
-         by {{book.author}}
+            by {{book.author}}
         </div>
         <div class="rating" fxLayoutAlign="space-evenly center">
             4.5<img class="Star" src="../../../assets/star_outline_white_24dp.svg" alt="">
@@ -39,7 +42,7 @@
             ({{book.quantity}})
         </div>
 
-        <div class="price" fxLayout="row" >
+        <div class="price" fxLayout="row">
             <div class="discountprice">
                 Rs.{{book.discountPrice}}
             </div>
@@ -54,8 +57,8 @@
                     ADD TO BAG
                 </button> -->
 
-                <button class="addtobag" (click)="addtocart(book)"> 
-                <img class="cartimg" src="../../../assets/shopping_cart_black_24dp.svg" alt=""></button>
+                <button class="addtobag" (click)="addtocart(book)">
+                    <img class="cartimg" src="../../../assets/shopping_cart_black_24dp.svg" alt=""></button>
             </div>
             <div fxLayout="row" fxLayoutAlign="start center">
                 <!-- <button mat-flat-button class="wishlist" (click)="addtowishlist()" >
@@ -63,15 +66,17 @@
                     WISHLIST
                 </button> -->
 
-                <button class="wishlist" (click)="addtowishlist(book)"> <mat-icon class="wishlistIcon">favorite</mat-icon></button>
+                <button class="wishlist" (click)="addtowishlist(book)">
+                    <mat-icon class="wishlistIcon">favorite</mat-icon>
+                </button>
             </div>
 
         </div>
 
     </div>
 
-    <div >
+    <div>
         <pagination-controls class="text-center my-pagination" (pageChange)="page = $event"></pagination-controls>
     </div>
-    
+
 </div>
