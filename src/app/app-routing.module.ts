@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminAddandupdateComponent } from './component/admin-addandupdate/admin-addandupdate.component';
 import { AdminComponent } from './component/admin/admin.component';
+import { AdminupdateComponent } from './component/adminupdate/adminupdate.component';
 import { AuthenticationGuard } from './component/authentication.guard';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { GetallbooksComponent } from './component/getallbooks/getallbooks.component';
@@ -26,8 +27,10 @@ const routes: Routes = [
    { path:'getcart',component:GetcartComponent},
    { path:'getwishlist',component:GetwishlistComponent},
    { path:'orderplacedsuccessfully',component:OrderplacedsuccessfullyComponent},
+
    { path:'admin',component:AdminComponent},
-   { path:'addandupdate',component:AdminAddandupdateComponent}
+   { path:'addandupdate',component:AdminAddandupdateComponent},
+   { path:'adminupdate',component:AdminupdateComponent}
   ]},
   
 ];

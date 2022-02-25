@@ -55,7 +55,7 @@ export class DashboardComponent implements OnInit {
     this.route.navigateByUrl('/login')
   }
 
-  clearFilter(search: any) {
+  clearFilter(search: any) {  // THIS IS DONE FOR SEARCH PIPE PART IN GETALLBOOKS AND DASHBOARD
     console.log(search);  //this .target.value is coming from console
 
     this.dataservice.sendData(search) // done for search pipe & this .target.value is coming from console

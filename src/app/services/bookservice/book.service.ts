@@ -128,6 +128,7 @@ export class BookService {
    }
 
    adminaddbook(data:any){
+     this.token=localStorage.getItem("token")
      let header={
        headers: new HttpHeaders({
         'content-Type':'application/json',
@@ -135,5 +136,17 @@ export class BookService {
        })
      }
      return this.httpService.postService('admin/add/book',data,true,header)
+   }
+
+   adminupdatebook(bookId:any, data:any){
+    this.token=localStorage.getItem("token")
+    let header= {
+      headers: new HttpHeaders({
+        'Content-Type':'application/json',
+        'x-access-token':this.token    // use x-acces-token instead of authorization as it is coming from backend otherwise it will throw error
+      })
+    }
+   return this.httpService.putService('admin/update/book/'+ bookId, data, true,header )  
+
    }
 }

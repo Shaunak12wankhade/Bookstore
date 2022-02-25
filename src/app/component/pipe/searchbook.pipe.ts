@@ -5,7 +5,9 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class SearchbookPipe implements PipeTransform {
 
-  transform(value: any = [], filterString: string) {
+  transform(value: any = [], filterString?: string) {
+    console.log(filterString);
+    
     // if (value.length === 0 || filteredString === ''){
     //   return value;
     // }

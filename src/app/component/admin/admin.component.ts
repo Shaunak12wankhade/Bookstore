@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { BookService } from 'src/app/services/bookservice/book.service';
 import { AdminAddandupdateComponent } from '../admin-addandupdate/admin-addandupdate.component';
+import { AdminupdateComponent } from '../adminupdate/adminupdate.component';
 
 @Component({
   selector: 'app-admin',
@@ -11,7 +12,13 @@ import { AdminAddandupdateComponent } from '../admin-addandupdate/admin-addandup
 export class AdminComponent implements OnInit {
   count:any;
   allbooks:any;
-
+  
+  bookName:any;
+  author:any;
+  description:any;
+  quantity:any;
+  price:any;
+  discountPrice:any;
   constructor(private books:BookService, public dialog: MatDialog) { }
 
   ngOnInit(): void {
@@ -38,31 +45,45 @@ export class AdminComponent implements OnInit {
   const dialogRef = this.dialog.open(AdminAddandupdateComponent, {
     width: '450px',
     height:'600px',     
-    data: {Book:null}
+    data: {}
   });
 
   dialogRef.afterClosed().subscribe(result => {
      console.log('The dialog was closed');
-    // this.title=result;
-    // this.description=result;
+     this.bookName=result;
+     this.author=result;
+     this.description=result;
+     this.quantity=result;
+     this.price=result;
+     this.discountPrice=result;
+    
+  });
+
+  
+}
+UpdateBook(bookobject: any): void {
+  const dialogRef = this.dialog.open(AdminupdateComponent, {
+    width: '450px',
+    height:'600px',     
+    data: {bookobject },
+  });
+  console.log ( "books data is" ,bookobject);
+  
+  
+
+  dialogRef.afterClosed().subscribe(result => {
+    //  console.log('The dialog was closed');
+    this.bookName=result;
+    this.author=result;
+    this.description=result;
+    this.quantity=result;
+    this.price=result;
+    this.discountPrice=result;
     
   });
   
-}
-
-// UpdateBook(note1object: any): void {
-//   const dialogRef = this.dialog.open(UpdateComponent, {
-//     width: '650px',     
-//     data: note1object,
-//   });
-
-//   dialogRef.afterClosed().subscribe(result => {
-//      console.log('The dialog was closed');
-//     // this.title=result;
-//     // this.description=result;
-    
-//   });
   
+}
 }
 
 

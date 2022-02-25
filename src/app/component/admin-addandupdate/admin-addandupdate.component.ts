@@ -2,6 +2,7 @@ import { Component,Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { BookService } from 'src/app/services/bookservice/book.service';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin-addandupdate',
@@ -12,7 +13,7 @@ export class AdminAddandupdateComponent implements OnInit {
   addandupdateForm!: FormGroup;
   submitted = false;
 
-  constructor(private formbuilder: FormBuilder,private books:BookService,
+  constructor(private formbuilder: FormBuilder,private books:BookService, private route:Router,
       public dialogRef: MatDialogRef<AdminAddandupdateComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,   // this data is coming from display notes.ts as we are injecting here from display.ts
     ) { }
@@ -43,12 +44,21 @@ export class AdminAddandupdateComponent implements OnInit {
         discountPrice: this.addandupdateForm.value.discountprice,
 
       }
+      // if(this.data.isAddBook){ 
 
       this.books.adminaddbook(reqdata).subscribe((response:any) => {
         console.log(response);
+
+        //  localStorage.setItem('token', response.result.accessToken)
+          // this.route.navigateByUrl('dashboard/admin')
        
         
-      })
+      });
+       //window.location.reload();
+
+    // } else{
+
+    // }
     }
   }
   

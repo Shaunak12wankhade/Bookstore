@@ -22,6 +22,18 @@ export class GetallbooksComponent implements OnInit {
   constructor( private books:BookService,private activatedroute: ActivatedRoute, private route:Router, private dataservice:DataService) { }
 
   ngOnInit(): void {
+    this.dataservice.receivedData.subscribe((response:any)=>{  //this is done for search pipe part & this received Data is coming from data service.ts for unrelated data sharing as our dashboard.ts and getall books don't have any relationship
+      console.log(response)
+    
+          this.searchword = response;
+          console.log(this.searchword);
+          
+
+     // console.log(this.filteredString);
+     
+       //  this.getallbooks();
+     
+   });
    
     this.bookid = this.activatedroute.snapshot.paramMap.get("bookId"); // we are getting/storing bookid by using activated route part and is done for addtocart and addto wishlist methods done below as sir asked to add cart and wishlist buttons below each book in getall books
     console.log(this.bookid);
@@ -29,16 +41,7 @@ export class GetallbooksComponent implements OnInit {
      this.getallbooks();
 
     
-    this.dataservice.receivedData.subscribe((response:any)=>{  // this received Data is coming from data service.ts for unrelated data sharing as our dashboard.ts and getall books dont have any relationship
-       console.log(response)
-     
-          // this.searchword = response;
-
-      // console.log(this.filteredString);
-      
-        //  this.getallbooks();
-      
-    });
+    
 
   }
   

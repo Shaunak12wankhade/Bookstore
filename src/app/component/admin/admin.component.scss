@@ -5,7 +5,7 @@ table,th,td {
     border: 1px solid gainsboro;
     height: 60px;
     width: auto;
-    margin-top: 120px;
+    margin-top: 30px;
     
 }
 .table{
@@ -41,17 +41,20 @@ td{
     justify-content: center;
     // margin-bottom: 10px;
     position: relative;
-    bottom: 50px;
+    // bottom: 50px;
     border: none;
     // overflow-y:inherit;
 }
 
 .addbookbutton{
     // border: 1px solid red;
-    margin-top: 305%;
-    position: relative;
-    right: 80%;
+    // margin-top: 305%;
+    // position: relative;
+    // right: 80%;
+    margin-top: 100px;
+    margin-right: 1025px;
 }
 .addbutton{
 //    width:100px;
+    cursor: pointer;
 }

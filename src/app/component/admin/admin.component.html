@@ -1,4 +1,8 @@
-<div class="entiretable" fxLayoutAlign="center center">
+<div class="entiretable" fxLayout="column" fxLayoutAlign="center center">
+    <div class="addbookbutton" >
+        <button (click)="AddBook()" class="addbutton">Add book</button>
+    </div>
+
     <table class="table">
         <tr>
             <th>Sr.No</th>
@@ -21,7 +25,8 @@
             <td>{{book.discountPrice}}</td>
             <td>{{book.quantity}}</td>
             <td class="buttons" fxLayoutAlign="space-around center" fxLayout="row" fxLayoutGap="15px" >
-                <button class="updatebutton"> Update</button>
+
+                <button (click)="UpdateBook(book)" class="updatebutton"> Update</button>
                 <button class="deletebutton">Delete</button>
             </td>
             
@@ -30,8 +35,8 @@
         </tr>
     </table>
 
-    <div class="addbookbutton" >
+    <!-- <div class="addbookbutton" >
         <button (click)="AddBook()" class="addbutton">Add book</button>
-    </div>
+    </div> -->
 
 </div>

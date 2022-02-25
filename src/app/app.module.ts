@@ -35,6 +35,7 @@ import { SearchbookPipe } from './component/pipe/searchbook.pipe';
 import {MatBadgeModule} from '@angular/material/badge';
 import { AdminAddandupdateComponent } from './component/admin-addandupdate/admin-addandupdate.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { AdminupdateComponent } from './component/adminupdate/adminupdate.component';
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     OrderplacedsuccessfullyComponent,
     AdminComponent,
     SearchbookPipe,
-    AdminAddandupdateComponent
+    AdminAddandupdateComponent,
+    AdminupdateComponent
   ],
   imports: [
     BrowserModule,

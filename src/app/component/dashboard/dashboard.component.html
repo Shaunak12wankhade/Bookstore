@@ -12,7 +12,8 @@
 
         <mat-card class="searchbar" fxLayout="row" fxLayout.xs="row">
             <img class="searchimg" src="../../../assets/search_black_24dp (1).svg" alt="">
-            <input class="search1" type="text" name="search" placeholder="Search" #search (keyup)="clearFilter(search.value)" fxHide.xs fxHide.sm> <!--this (keyup) is used for data binding for search pipe part-->
+            
+            <input class="search1" type="text" name="search" placeholder="Search" #search (keyup)="clearFilter(search.value)" fxHide.xs fxHide.sm> <!--this (keyup) is used for data binding for search pipe part THIS IS DONE FOR SEARCH PIPE PART IN GETALLBOOKS AND DASHBOARD-->
         </mat-card>
 
         <div class="profile" [matMenuTriggerFor]="menu" fxLayout="column" fxLayoutAlign="center center"
