@@ -96,11 +96,7 @@
     color: grey;
     margin-left: 5px;
   }
-  .my-pagination ::ng-deep .ngx-pagination .current {
-    background: brown;
-  }
   
-
 .cartandwishlistbutton{
   margin-top: -20px;
   margin-left: 5px;
@@ -133,4 +129,14 @@
 }
 .wishlistIcon:hover{
   color: red;
+}
+.my-pagination ::ng-deep .ngx-pagination .current {
+  background: brown;
+  justify-content: center;
+}
+
+.pagination{
+  //  border: 1px solid red;
+  //  justify-content: center;
+  
 }

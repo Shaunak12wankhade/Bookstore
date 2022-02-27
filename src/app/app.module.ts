@@ -37,6 +37,8 @@ import { AdminAddandupdateComponent } from './component/admin-addandupdate/admin
 import {MatDialogModule} from '@angular/material/dialog';
 import { AdminupdateComponent } from './component/adminupdate/adminupdate.component';
 
+import { NgxStarRatingModule } from 'ngx-star-rating';
+
 
 @NgModule({
   declarations: [
@@ -76,7 +78,8 @@ import { AdminupdateComponent } from './component/adminupdate/adminupdate.compon
     MatRadioModule,
     MatMenuModule,
     MatBadgeModule,
-    MatDialogModule
+    MatDialogModule,
+    NgxStarRatingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

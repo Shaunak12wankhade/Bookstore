@@ -73,13 +73,13 @@ export class GetallbooksComponent implements OnInit {
       console.log(response);
       
     })
-    this.route.navigateByUrl('/dashboard/getcart' )
+    // this.route.navigateByUrl('/dashboard/getcart' )
   }
   addtowishlist(book:any){
     this.books.useraddtowishlist(book._id).subscribe((response:any) =>{
       console.log(response);
       
     })
-    this.route.navigateByUrl('/dashboard/getwishlist')
+    // this.route.navigateByUrl('/dashboard/getwishlist')
   }
 }

@@ -12,7 +12,17 @@ export class DashboardComponent implements OnInit {
   // filteredString: string = '';  // done for search pipe part
    isSearch =false; // done for search pipe part
   badgecount: any; // done for badge count
-  constructor(private route: Router, private books: BookService, private dataservice: DataService) { }
+
+  // fullName= localStorage.getItem('fullName');
+  // Name = this.fullName?.split(" ")[0];
+
+  fullName:any;
+
+  constructor(private route: Router, private books: BookService, private dataservice: DataService) {
+    // this.fullName=localStorage.getItem("fullName");
+  this.fullName=localStorage.getItem("fullName");
+
+   }
 
   ngOnInit(): void {
     this.getcartcountforbadge();

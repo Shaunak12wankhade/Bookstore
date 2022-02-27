@@ -19,12 +19,12 @@
 
         <div class="cartandwishlistbutton" fxLayout="row" fxLayoutGap="40px" fxLayoutAlign="space-between center">
             <div>
-                <button mat-raised-button class="addtobag" (click)="addtocart()" >
+                <button mat-raised-button class="addtobag" (click)="addtocart()">
                     ADD TO BAG
                 </button>
             </div>
             <div fxLayout="row" fxLayoutAlign="start center">
-                <button mat-flat-button class="wishlist" (click)="addtowishlist()" >
+                <button mat-flat-button class="wishlist" (click)="addtowishlist()">
                     <mat-icon class="wishlistIcon">favorite</mat-icon>
                     WISHLIST
                 </button>
@@ -38,22 +38,23 @@
     </div>
 
     <div class="bookdetailsdiv" fxLayout="column" fxLayout.xs="column" fxFlex.xs="95">
-        <div class="entirebook" fxLayout="column" fxLayout.sm="column"  >
-    
+        <div class="entirebook" fxLayout="column" fxLayout.sm="column">
+
             <div class="bookname">
-                {{bookdata?.bookName}}  <!--this ? means if bookName is available then it will show that data in console and browser otherwise it will return null -->
+                {{bookdata?.bookName}}
+                <!--this ? means if bookName is available then it will show that data in console and browser otherwise it will return null -->
             </div>
             <div class="author">
-             by {{bookdata?.author}}
+                by {{bookdata?.author}}
             </div>
-            <div class="rating"  fxLayoutAlign="space-evenly center">
+            <div class="rating" fxLayoutAlign="space-evenly center">
                 4.5<img class="Star" src="../../../assets/star_white_24dp.svg" alt="">
             </div>
             <div class="quantity">
                 ({{bookdata?.quantity}})
             </div>
-    
-            <div class="price" fxLayout="row" fxLayoutGap="10px" >
+
+            <div class="price" fxLayout="row" fxLayoutGap="10px">
                 <div class="discountprice">
                     Rs.{{bookdata?.discountPrice}}
                 </div>
@@ -61,16 +62,20 @@
                     <del> Rs.{{bookdata?.price}} </del>
                 </div>
             </div>
-    
+
         </div>
 
         <div fxLayout="column" fxLayoutAlign="start start">
             <span class="bookdetail">Book Detail</span>
             <p class="bookparagraph">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut<br> labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris<br> nisi ut aliquip ex ea commodo consequat. 
-                Duis aute irure dolor in reprehenderit in voluptate velit<br> esse cillum dolore eu fugiat nulla pariatur. 
-                Excepteur sint occaecat cupidatat non proident,<br> sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut<br> labore
+                et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris<br> nisi ut aliquip ex ea commodo
+                consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit<br> esse cillum dolore eu fugiat nulla
+                pariatur.
+                Excepteur sint occaecat cupidatat non proident,<br> sunt in culpa qui officia deserunt mollit anim id
+                est laborum.
             </p>
         </div>
 
@@ -83,35 +88,40 @@
                 <p class="ratename">Overall Rating</p>
                 <div>
                     <div class="star-widget">
-                        <input type="radio" name="rate" id="rate-5" [(ngModel)]="value" value="5"> <!-- this =value is coming from quickview.ts used inside addfeedback() inside rating: this.value-->
-                        <label for="rate-5" class="fa fa-star"></label>
+                       
+                            <input type="radio" name="rate" id="rate-5" [(ngModel)]="value" value="5"> 
+                            <!-- this =value is coming from quickview.ts used inside addfeedback() inside rating: this.value-->
+                            <label for="rate-5" class="fa fa-star"></label>
 
-                        <input type="radio" name="rate" id="rate-4" [(ngModel)]="value" value="4">
-                        <label for="rate-4" class="fa fa-star"></label>
+                            <input type="radio" name="rate" id="rate-4" [(ngModel)]="value" value="4">
+                            <label for="rate-4" class="fa fa-star"></label>
 
-                        <input type="radio" name="rate" id="rate-3" [(ngModel)]="value" value="3">
-                        <label for="rate-3" class="fa fa-star"></label>
+                            <input type="radio" name="rate" id="rate-3" [(ngModel)]="value" value="3">
+                            <label for="rate-3" class="fa fa-star"></label>
 
-                        <input type="radio" name="rate" id="rate-2" [(ngModel)]="value" value="2">
-                        <label for="rate-2" class="fa fa-star"></label>
+                            <input type="radio" name="rate" id="rate-2" [(ngModel)]="value" value="2">
+                            <label for="rate-2" class="fa fa-star"></label>
 
-                        <input type="radio" name="rate" id="rate-1" [(ngModel)]="value" value="1">
-                        <label for="rate-1" class="fa fa-star"></label>
+                            <input type="radio" name="rate" id="rate-1" [(ngModel)]="value" value="1">
+                            <label for="rate-1" class="fa fa-star"></label>
+                       
 
                     </div>
                 </div>
-               
+
             </div>
             <div>
-                <input [(ngModel)]="feedback" class="review" type="text" placeholder="Write your review">  <!--this =feedback is coming from quickview.ts used inside addfeedback() inside comment: this.feedback -->
+                <input [(ngModel)]="feedback" class="review" type="text" placeholder="Write your review">
+                <!--this =feedback is coming from quickview.ts used inside addfeedback() inside comment: this.feedback -->
             </div>
             <div fxLayoutAlign="end center">
-                <button class="submitbutton" (click)="addfeedback()" mat-flat-button color="primary" >Submit</button>
+                <button class="submitbutton" (click)="addfeedback()" mat-flat-button color="primary">Submit</button>
             </div>
         </div>
 
-        <div class="userfeedback" *ngFor="let feedback of feedbackArray" fxLayout="column wrap" fxLayoutAlign="start start" fxLayoutGap="10px">
-            <div >
+        <div class="userfeedback" *ngFor="let feedback of feedbackArray" fxLayout="column wrap"
+            fxLayoutAlign="start start" fxLayoutGap="10px">
+            <div>
                 <div fxLayoutGap="10px">
                     <button mat-mini-fab class="shortname">{{getShortName (feedback.user_id.fullName)}} </button>
                     <span class="feedbackname">{{feedback.user_id.fullName}} </span>

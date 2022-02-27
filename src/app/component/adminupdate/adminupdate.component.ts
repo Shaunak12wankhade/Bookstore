@@ -44,8 +44,8 @@ export class AdminupdateComponent implements OnInit {
     })
 
     if (this.data?.bookobject != null) { // this data? is coming from admin.ts from open dialog of updatebook and bookobject is coming from admin.ts data:bookobject
-      this.updateForm.patchValue({
-        bookname: this.data?.bookobject['bookName'], // leftside is formcontrol name and right side['bookName'] is coming from admin.component.html
+      this.updateForm.patchValue({  //patch value works on key-value format and patch value will only update the matching objects and ignores the rest
+        bookname: this.data?.bookobject['bookName'], // leftside is formcontrol name and right side['bookName'] is coming from *ngFor admin.component.html
         author: this.data?.bookobject['author'],
         description: this.data?.bookobject['description'],
         discountprice: this.data?.bookobject['discountPrice'],
@@ -55,13 +55,6 @@ export class AdminupdateComponent implements OnInit {
     }
 
     // this right side bookName,author,discountPrice  is coming from admin.component.html file and left side is coming from (ngModel) from adminupdate.html declared above below exports
-    // this.bookName=this.data.bookName,
-    // this.author=this.data.author,
-    // this.description=this.data.description,
-    // this.quantity=this.data.quantity,
-    // this.price=this.data.price,
-    // this.discountPrice=this.data.discountPrice,
-
     // this.bookId=this.data._id
    
     
@@ -89,15 +82,15 @@ export class AdminupdateComponent implements OnInit {
 
       }
      
-      this.books.adminupdatebook(this.data.bookobject._id,reqdata).subscribe((response:any) => {
+      this.books.adminupdatebook(this.data.bookobject._id,reqdata).subscribe((response:any) => {  //._id is used because we are updating the particular product by its id & .data.bookobject is coming from admin.ts from update() method from data: {bookobject}
         console.log(response);
 
         //  localStorage.setItem('token', response.result.accessToken)
           // this.route.navigateByUrl('dashboard/admin')
        
-        
+          window.location.reload();
       });
-       window.location.reload();
+       
 
     // } else{
 
