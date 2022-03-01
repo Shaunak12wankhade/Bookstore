@@ -44,8 +44,8 @@ export class AdminComponent implements OnInit {
   // this below code is used to update the note i.e.,updatecomponent
   AddBook(): void {
     const dialogRef = this.dialog.open(AdminAddandupdateComponent, {
-      width: '450px',
-      height: '600px',
+      width: '650px',
+      height: '460px',
       data: { isAddBook: true }
     });
 
@@ -64,8 +64,8 @@ export class AdminComponent implements OnInit {
   }
   UpdateBook(bookobject: any): void {
     const dialogRef = this.dialog.open(AdminAddandupdateComponent, {
-      width: '450px',
-      height: '600px',
+      width: '650px',
+      height: '460px',
       data: { bookobject, isAddBook: false },
     });
     console.log("books data is", bookobject);

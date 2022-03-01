@@ -10,7 +10,9 @@ import { DataService } from 'src/app/services/dataservice/data.service';
 })
 export class GetallbooksComponent implements OnInit {
   book:any;  // used as a variable to store id of books 
-  allbooks:any;
+
+  allbooks:any[] = []; // this [] is done for added to bag button part
+  
   countbooks:any; //we are just binding data using string interpolation between getallbooks.html and getaalbooks.ts
   totalLength:any;
   page:number = 1;
@@ -18,7 +20,9 @@ export class GetallbooksComponent implements OnInit {
   bookid:any;  // used as a variable to store book id's used in activated route part below
   
   searchword: any;  // done for search pipe part
-
+  cartbooks:any;
+  cartBooksIdList:any[] = []; // this is done for added to bag button part and we are taking array[] because below we are using push function and push function works on array only
+  
   constructor( private books:BookService,private activatedroute: ActivatedRoute, private route:Router, private dataservice:DataService) { }
 
   ngOnInit(): void {
@@ -37,7 +41,8 @@ export class GetallbooksComponent implements OnInit {
    
     this.bookid = this.activatedroute.snapshot.paramMap.get("bookId"); // we are getting/storing bookid by using activated route part and is done for addtocart and addto wishlist methods done below as sir asked to add cart and wishlist buttons below each book in getall books
     console.log(this.bookid);
-
+     
+     this.getcartlist(); // this is done for added to bag button part
      this.getallbooks();
 
     
@@ -49,15 +54,59 @@ export class GetallbooksComponent implements OnInit {
     
       this.books.usergetallbooks().subscribe((response:any)=> {
       console.log(response.result);
-      this.allbooks= response.result
+      this.allbooks= response.result;
 
+      this.allbooks.map((b:any)=>b.isAddedToCart=false);
+      console.log(this.allbooks);
+
+      // this.allbooks.map((element:any)=>element.isAddedToCart=false);
+      // console.log(this.allbooks);
+      
       this.countbooks=response.result.length  //.length is used because the count of number of books is stored inside length we can see that in console at the endof the books array length:20 is written
       this.totalLength=response.result.length  // done for pagination part
       
       // localStorage.setItem('bookId', book._id);
+      console.log(this.cartBooksIdList);
+     
+      this.allbooks.forEach((element:any) => {  // in element we are storing our entire bookdetails 
+         console.log(element._id);
+        
+         console.log(this.cartBooksIdList.indexOf(element._id));
       
-    })
+        if (this.cartBooksIdList.indexOf(element._id)>=0){  
+          element.isAddedToCart=true;
+        }
+        
+        
+      });
+      console.log(this.allbooks);
+      
+      
+    });
+
+    // this.allbooks.result.forEach((element:any) => {  // in element we are storing our entire bookdetails 
+
+    //   if (this.cartBooksIdList.indexOf(element._id)>=0){  
+    //     element.isAddedToCart=true;
+    //   }
+      
+    // });
   }
+   
+  getcartlist() {  //We are again calling this getcartlist api here in getall books.ts for this added to bag and map function part done above
+
+    this.books.usergetcartlist().subscribe((response: any) => {
+      console.log(response);
+      
+      this.cartbooks = response.result;
+      response.result.forEach((element:any)=> {
+        this.cartBooksIdList.push(element["product_id"]._id)  // this[product_id] we are taking because in browser in console we can see whatever the bookid we want it is stored inside element(i.e., 0,1,2,3...) inside product_id and inside that there is our desired bookid
+      })
+    })
+    
+     
+  }
+  
 
   quickview(book:any){  //used as a variable to store id of books used below in localstorage as book._id
 
@@ -82,4 +131,20 @@ export class GetallbooksComponent implements OnInit {
     })
     // this.route.navigateByUrl('/dashboard/getwishlist')
   }
+
+
+
+
+
+  
+  lowtohigh(){
+    this.allbooks= this.allbooks.sort((low:any,high:any)=> low.price-high.price); //.price is coming from backend api
+  }
+  hightolow(){
+    this.allbooks= this.allbooks.sort((low:any,high:any)=> high.price-low.price);
+  }
+  newestarrivals(){
+    this.allbooks.reverse();
+  }
 }
+

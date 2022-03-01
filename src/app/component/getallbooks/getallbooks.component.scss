@@ -105,23 +105,27 @@
 
 }
 .addtobag{
-    // background: brown; 
-    color: rgba(255, 255, 255, 0.767); 
-    // color: black;
+    //  background: brown; 
+     color: rgba(255, 255, 255, 0.767); 
+    //  color: black;
     width: 100%;
     cursor: pointer;
     // border: 1px solid gainsboro; 
 
 }
+.addedtobag{
+  background: brown;
+  color: rgba(255, 255, 255, 0.767);  
+}
 .cartimg{
   color: black;
 }
 .wishlist{
-    // background: black; 
+    // background: brown; 
     color: rgba(255, 255, 255, 0.767); 
     width: 95%;
     cursor: pointer;
-    // border: 1px solid gainsboro;   
+     border: 1px solid gainsboro;   
 
 }
 .wishlistIcon{

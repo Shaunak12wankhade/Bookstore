@@ -4,7 +4,9 @@
 
 export const environment = {
   production: false,
-  baseurl:"https://bookstore.incubation.bridgelabz.com/bookstore_user/"
+   baseurl:"https://bookstore.incubation.bridgelabz.com/bookstore_user/"
+
+  // baseurl:"https://new-bookstore-backend.herokuapp.com/bookstore_user/"
 };
 
 /*

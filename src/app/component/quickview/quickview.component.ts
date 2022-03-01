@@ -15,6 +15,11 @@ export class QuickviewComponent implements OnInit {
   feedbackArray:any;
   feedback:any;
   value:any;
+
+  book_qty = 1;
+  addtobag:boolean=true;
+  quantity:boolean=false;
+
   constructor(private books:BookService, private activatedroute: ActivatedRoute, private route:Router) { }
 
   ngOnInit(): void {
@@ -42,11 +47,13 @@ export class QuickviewComponent implements OnInit {
   }
 
   addtocart(){
+    this.addtobag= false;
+    this.quantity=true;
     this.books.useraddtobag(this.bookid).subscribe((response:any) =>{
       console.log(response);
       
     })
-    this.route.navigateByUrl('/dashboard/getcart')
+     this.route.navigateByUrl('/dashboard/getcart')
   }
   addtowishlist(){
     this.books.useraddtowishlist(this.bookid).subscribe((response:any) =>{
@@ -80,5 +87,26 @@ export class QuickviewComponent implements OnInit {
 
   getShortName(fullName:any) { 
     return fullName.split(' ').map((n:any) => n[0]).join('');
+  }
+
+  negative() {
+    if (this.book_qty > 1) {
+      this.book_qty = this.book_qty - 1;
+    }
+    this.updatequantity()  // to update the quantity of books in browser after clicking on this negative button we have to call this updatequantity() method here with argument, if we didnt call this updatequantity() method quantity will not get updated after clicking on(-) button
+  }
+  positive() {
+    this.book_qty = this.book_qty + 1;
+    this.updatequantity()
+  }
+
+  updatequantity() {
+    let req = {
+      "quantityToBuy": this.book_qty  // this quantityToBuy is coming from backend & book_qty is coming from string interpolation done in getcart.html
+    }
+    this.books.userupdatequantity(this.bookdata._id, req).subscribe((response: any) => {
+      console.log(response);
+
+    })
   }
 }

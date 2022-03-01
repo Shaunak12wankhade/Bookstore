@@ -1,5 +1,5 @@
 <mat-accordion class="example-headers-align">
-    <mat-expansion-panel class="panel1" [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+    <mat-expansion-panel  class="panel1" [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
         <mat-expansion-panel-header>
             <mat-panel-title>
                 My Cart({{cartcount}})
@@ -65,7 +65,9 @@
                         <span class="currentlocation">Use current location</span>
                     </div>
                     <div>
-                        <button mat-flat-button class="button" color="primary" (click)="nextStep()">Place Order</button>
+                        <button mat-flat-button class="button" color="primary" (click)="nextStep()">Place Order
+
+                        </button>
                     </div>
                 </div>
 
@@ -84,7 +86,7 @@
 
         <div class="customerdetails" fxLayout="row" fxLayoutAlign="space-between start">
 
-            <form [formGroup]="customerForm" (ngSubmit)="onSubmit()">
+            <form [formGroup]="customerForm" (ngSubmit)="onSubmit()" >
                 <div class="maindivofform" fxLayout="column" fxLayoutGap="2px">
 
                     <div class="details" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="40%">

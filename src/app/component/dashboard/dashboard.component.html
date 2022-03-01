@@ -42,7 +42,7 @@
         <div class="cart" (click)="cart()" fxLayout="column" fxLayoutAlign="center center" fxLayout.xs="row"
             fxFlex.xs="50">
 
-            <button style="background-color: darkred; border: none; cursor: pointer;" matBadge={{badgecount}} matBadgePosition="after" matBadgeColor="warn">
+            <button style="background-color: darkred; border: none; cursor: pointer;" matBadge={{badgecount}} matBadgePosition="after" matBadgeColor="warn" [matBadgeHidden]="badgecount==0">
                 <img class="cartimg" src="../../../assets/shopping_cart_white_24dp.svg" alt="">
             </button>
             <p>Cart</p>

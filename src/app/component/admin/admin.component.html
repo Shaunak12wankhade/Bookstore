@@ -25,9 +25,9 @@
             <td>{{book.price}}</td>
             <td>{{book.discountPrice}}</td>
             <td>{{book.quantity}}</td>
-            <td class="buttons" fxLayoutAlign="space-around center" fxLayout="row" fxLayoutGap="15px">
-                <button  (click)="UpdateBook(book)" class="updatebutton"> Update</button>
-                <button (click)="deletebook(book)" class="deletebutton">Delete</button>
+            <td class="buttons" fxLayoutAlign="space-evenly center" fxLayout="row" fxLayoutGap="10px">
+                <button  mat-flat-button color="accent" (click)="UpdateBook(book)" class="updatebutton"> Update</button>
+                <button  mat-flat-button color="warn" (click)="deletebook(book)" class="deletebutton">Delete</button>
             </td>
 
 

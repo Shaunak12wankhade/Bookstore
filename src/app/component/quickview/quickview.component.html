@@ -19,9 +19,24 @@
 
         <div class="cartandwishlistbutton" fxLayout="row" fxLayoutGap="40px" fxLayoutAlign="space-between center">
             <div>
-                <button mat-raised-button class="addtobag" (click)="addtocart()">
+                <button *ngIf="addtobag" mat-raised-button class="addtobag" (click)="addtocart()">
                     ADD TO BAG
                 </button>
+
+                <div *ngIf="quantity" class="countquantity" fxLayout="row" fxLayoutAlign="space-evenly center">
+                    <button mat-mini-fab class="negativebutton" (click)="negative()">
+                        <!--this (book) is coming from ngFor book of cart books, we are passing this book as an argument in click function because in getcart.ts file in negative() & updatequantity() method we have given argument as (book:any)-->
+                        <span class="negative">-</span>
+                    </button>
+                    <span class="bookquantity"> {{book_qty}} </span>
+                    <button mat-mini-fab class="positivebutton" (click)="positive()">
+                        <!--this (book) is coming from ngFor book of cart books, we are passing this (book) as an argument in click function because in getcart.ts file in positive() & updatequantity() method we have given argument as (book:any)-->
+                        <span class="positive">+</span>
+                    </button>
+                    <!-- <span class="remove" (click)="removecartitem()">Remove</span> -->
+                </div>
+
+
             </div>
             <div fxLayout="row" fxLayoutAlign="start center">
                 <button mat-flat-button class="wishlist" (click)="addtowishlist()">
@@ -33,6 +48,7 @@
 
 
         </div>
+      
 
 
     </div>

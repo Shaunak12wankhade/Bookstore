@@ -18,6 +18,8 @@ export class GetcartComponent implements OnInit {
 
   customerForm!: FormGroup;
   submitted = false;
+  isClickedPlaceorder:boolean=false;
+  isUpdatedAddress:boolean=false;
 
   constructor(private books: BookService, private formbuilder: FormBuilder, private user: UserService, private route:Router) { }
 

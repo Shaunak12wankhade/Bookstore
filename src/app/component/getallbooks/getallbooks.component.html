@@ -10,9 +10,9 @@
         <mat-form-field appearance="outline">
             <mat-label>Sort by relevance</mat-label>
             <mat-select class="matselect">
-                <mat-option value="one">Price:Low to High</mat-option>
-                <mat-option value="two">Price:High to Low</mat-option>
-                <mat-option value="third">Newest Arrivals</mat-option>
+                <mat-option (click)="lowtohigh()" value="one">Price:Low to High</mat-option>
+                <mat-option (click)=" hightolow()" value="two">Price:High to Low</mat-option>
+                <mat-option (click)="newestarrivals()" value="third">Newest Arrivals</mat-option>
             </mat-select>
         </mat-form-field>
     </div>
@@ -24,7 +24,8 @@
         *ngFor="let book of allbooks | searchbook:searchword | paginate: { itemsPerPage: 8, currentPage: page, totalItems:totalLength } "
         fxLayout.sm="column">
 
-        <div class="bookimg" (click)="quickview(book)"> <!-- this (book) is coming from ngFor (let book) as we are storing aur bookname, author etc in book -->
+        <div class="bookimg" (click)="quickview(book)">
+            <!-- this (book) is coming from ngFor (let book) as we are storing aur bookname, author etc in book -->
             <img class="img1" src="../../../assets/Image 11@2x.png" alt="">
         </div>
 
@@ -52,24 +53,43 @@
         </div>
 
         <div class="cartandwishlistbutton" fxLayout="row" fxLayoutGap="5px" fxLayoutAlign="space-evenly center">
-            <div>
-                <!-- <button mat-raised-button class="addtobag" (click)="addtocart()" >
+            <!-- <div *ngIf="!book.isAddedToCart" > -->
+                <div *ngIf="!book.isAddedToCart">
+                    <!-- <button mat-raised-button class="addtobag" (click)="addtocart(book)" >
                     ADD TO BAG
                 </button> -->
 
-                <button class="addtobag" (click)="addtocart(book)">
-                    <img class="cartimg" src="../../../assets/shopping_cart_black_24dp.svg" alt=""></button>
+                    <button class="addtobag" (click)="addtocart(book)">
+                        <img class="cartimg" src="../../../assets/shopping_cart_black_24dp.svg" alt="">
+                    </button>
+                </div>
+                
+            <div *ngIf="book.isAddedToCart" fxLayout="row" fxLayoutAlign="start center">
+                <button mat-raised-button class="addedtobag">
+                    ADDED TO BAG
+                </button>
             </div>
-            <div fxLayout="row" fxLayoutAlign="start center">
-                <!-- <button mat-flat-button class="wishlist" (click)="addtowishlist()" >
+
+                <div *ngIf="!book.isAddedToCart" fxLayout="row" fxLayoutAlign="start center">
+                    <!-- <button mat-flat-button class="wishlist" (click)="addtowishlist(book)" >
                     <mat-icon class="wishlistIcon">favorite</mat-icon>
                     WISHLIST
                 </button> -->
 
-                <button class="wishlist" (click)="addtowishlist(book)">
-                    <mat-icon class="wishlistIcon">favorite</mat-icon>
+                    <button class="wishlist" (click)="addtowishlist(book)">
+                        <mat-icon class="wishlistIcon">favorite</mat-icon>
+                    </button>
+                </div>
+            <!-- </div> -->
+
+
+            <!-- <div *ngIf="book.isAddedToCart" fxLayout="row" fxLayoutAlign="start center">
+                <button mat-raised-button class="addedtobag">
+                    ADDED TO BAG
                 </button>
-            </div>
+            </div> -->
+
+
 
         </div>
 
@@ -80,6 +100,6 @@
     </div> -->
 
 </div>
-<div class="pagination" fxLayoutAlign="center center"> 
+<div class="pagination" fxLayoutAlign="center center">
     <pagination-controls class="text-center my-pagination" (pageChange)="page = $event"></pagination-controls>
 </div>

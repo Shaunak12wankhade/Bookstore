@@ -13,14 +13,12 @@ export class DashboardComponent implements OnInit {
    isSearch =false; // done for search pipe part
   badgecount: any; // done for badge count
 
-  // fullName= localStorage.getItem('fullName');
-  // Name = this.fullName?.split(" ")[0];
-
   fullName:any;
 
   constructor(private route: Router, private books: BookService, private dataservice: DataService) {
     // this.fullName=localStorage.getItem("fullName");
-  this.fullName=localStorage.getItem("fullName");
+   this.fullName=localStorage.getItem('fullName');
+    //  this.fullName=localStorage.getItem('email');
 
    }
 

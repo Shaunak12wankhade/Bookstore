@@ -43,7 +43,9 @@ export class LoginComponent implements OnInit {
         
         localStorage.setItem('token', response.result.accessToken);  // this accessToken is coming from swagger and we can see inside console also
 
-        localStorage.setItem('fullName',response.result.fullName);
+          localStorage.setItem('fullName',response.result.fullName);
+
+        //  localStorage.setItem('email', response.email);
 
         this.route.navigateByUrl("/dashboard")  //by doing this after clicking on login button we will get redirected to dashboard
 

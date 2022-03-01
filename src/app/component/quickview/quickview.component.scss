@@ -116,7 +116,7 @@
 }
 .quantity{
     font-size: 15px;
-    margin-top: -30px;
+    margin-top: -32px;
     margin-left: 55px;
     color: grey;
   }
@@ -256,4 +256,49 @@ input:checked ~ label{
 input#rate-5:checked ~ label{
     color: #fe7;
     text-shadow: 0 0 20px #fe7;
+}
+
+
+.countquantity{
+    border: 1px solid palevioletred;
+    position: relative;
+    left: 10px;
+
+}
+.negativebutton{
+    background-color: white; 
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+}
+.negative{
+    color: lightgrey;
+    position: relative;
+    top: -10px;
+
+}
+.bookquantity{
+    font-size: 15px;
+    border: 1px solid whitesmoke;
+    // height: 25px;
+    // width: 40px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    text-align: center;
+
+    width: 40px;
+    height: 23px;
+
+}
+.positivebutton{
+    background-color: white; 
+    margin-left: 10px;
+    width: 24px;
+    height: 24px;
+
+}
+.positive{
+    color: black;
+    position: relative;
+    top: -10px;
+
 }
