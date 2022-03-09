@@ -1,7 +1,7 @@
 <div class="entiretable" fxLayout="column" fxLayoutAlign="center center" fxLayout.sm="column" fxFlex.xs="95"
     fxFlex.sm="60">
     <div class="addbookbutton" fxLayout="column" fxLayout.sm="row" fxFlex.xs="95" fxFlex.sm="60">
-        <button mat-flat-button color="primary" (click)="AddBook()" class="addbutton">Add book</button>
+        <button color="primary"  (click)="AddBook()" class="addbutton">Add book</button>
     </div>
 
     <table class="table">
@@ -26,8 +26,8 @@
             <td>{{book.discountPrice}}</td>
             <td>{{book.quantity}}</td>
             <td class="buttons" fxLayoutAlign="space-evenly center" fxLayout="row" fxLayoutGap="10px">
-                <button  mat-flat-button color="accent" (click)="UpdateBook(book)" class="updatebutton"> Update</button>
-                <button  mat-flat-button color="warn" (click)="deletebook(book)" class="deletebutton">Delete</button>
+                <button (click)="UpdateBook(book)" class="updatebutton"> Update</button>
+                <button (click)="deletebook(book)" class="deletebutton">Delete</button>
             </td>
 
 
