@@ -81,4 +81,7 @@ export class AdminAddandupdateComponent implements OnInit {
     }
 
   }
+  close(): void {
+    this.dialogRef.close()
+  }
 }

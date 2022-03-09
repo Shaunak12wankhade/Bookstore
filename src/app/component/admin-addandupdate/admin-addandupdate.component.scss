@@ -33,12 +33,15 @@
 }
 
 .addandupdatetext{
-    // border: 1px solid red;
-
-    //  margin-top: -80px;
+    //  border: 1px solid red;
+     margin-top:5px;
      position: relative;
-
     //  top: -130px;
+    
+}
+h2{
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 .form{
@@ -56,6 +59,7 @@
 
     width: 500px;
     height: 300px;
+    margin-top: 15px;
 }
 .bookname{
     // border: 1px solid green;
@@ -69,4 +73,10 @@
 }
 .addbutton{
     // margin-left: 60px;
+}
+.closebutton{
+    border: 1px solid gainsboro;
+    width: 100px;
+    height: 36px;
+    margin-top: 2px;
 }

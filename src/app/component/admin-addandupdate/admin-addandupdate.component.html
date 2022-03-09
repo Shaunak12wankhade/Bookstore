@@ -107,23 +107,29 @@
                         </div>
                     </div>
 
-                    <div fxLayoutAlign="center center">
-                        <button mat-flat-button color="primary" *ngIf="data?.isAddBook" class="addbutton">Add book</button>
+                    <div style="margin-left: 300px;" fxLayoutAlign="start center">
+                        <button mat-flat-button color="primary" *ngIf="data?.isAddBook" class="addbutton">Add
+                            book</button>
                         <!-- here after data we have to use ? because without using this our book will not be added  ,this data. is coming from admin.component.ts from Addbook() open dialog box  from data:{isAddBook:true}-->
-                        <button mat-flat-button color="accent" *ngIf="!data?.isAddBook" class="addbutton">Update book</button>
+                        <button mat-flat-button color="accent" *ngIf="!data?.isAddBook" class="addbutton">Update
+                            book</button>
+
                     </div>
 
 
-
-
-
-
-
-
-
-
                 </div>
+                <!-- <div>
+                    <button mat-flat-button color="" class="closebutton">Close
+
+                    </button>
+                </div> -->
             </form>
+
+            <div style="margin-top:-23px; margin-right:170px;" fxLayoutAlign="end end">
+                <button mat-flat-button color="" class="closebutton" (click)=" close()">Cancel
+
+                </button>
+            </div>
 
         </div>
     </mat-card>
