@@ -1,5 +1,6 @@
 <mat-accordion class="example-headers-align">
-    <mat-expansion-panel  class="panel1" [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+    <!-- <mat-expansion-panel  class="panel1" [expanded]="step === 0" (opened)="setStep(0)" hideToggle> -->
+        <mat-expansion-panel  class="panel1" [expanded]="true" hideToggle>
         <mat-expansion-panel-header>
             <mat-panel-title>
                 My Cart({{cartcount}})
@@ -65,7 +66,7 @@
                         <span class="currentlocation">Use current location</span>
                     </div>
                     <div>
-                        <button mat-flat-button class="button" color="primary" (click)="nextStep()">Place Order
+                        <button mat-flat-button class="button" color="primary" *ngIf="step1button && disabled" (click)="setStep(1)">Place Order
 
                         </button>
                     </div>
@@ -76,7 +77,8 @@
         </div>
     </mat-expansion-panel>
 
-    <mat-expansion-panel class="panel2" [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
+    <!-- <mat-expansion-panel class="panel2" [expanded]="step === 1" (opened)="setStep(1)" hideToggle> -->
+        <mat-expansion-panel class="panel2" [expanded]="step1" hideToggle>
         <mat-expansion-panel-header>
             <mat-panel-title>
                 Address Details
@@ -191,7 +193,7 @@
                     </div>
                     <div>
                         <button mat-flat-button class="continuebutton" color="primary"
-                            (click)="nextStep()">Continue</button>
+                            (click)="setStep(2)" *ngIf="step2button" >Continue</button>
                     </div>
                 </div>
 
@@ -204,7 +206,8 @@
         </div>
     </mat-expansion-panel>
 
-    <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle>
+    <!-- <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle> -->
+        <mat-expansion-panel [expanded]="step2"hideToggle>
         <mat-expansion-panel-header>
             <mat-panel-title>
                 Order Summary
@@ -252,7 +255,7 @@
 
                     <div>
                         <button mat-flat-button class="checkoutbutton" (click)="ordersummary()"
-                            color="primary">Checkout</button>
+                            color="primary" >Checkout</button>
                     </div>
                 </div>
 

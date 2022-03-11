@@ -10,18 +10,33 @@ import { UserService } from 'src/app/services/userservice/user.service';
   styleUrls: ['./getcart.component.scss']
 })
 export class GetcartComponent implements OnInit {
+  book:any; // this is used inside nextstep() for cartcount as if(this.book.cartcount){}
   cartcount: any;
   cartbooks: any; // coming from getcart.html from ngFor
   orderlist: any = []; //use to store list of orders & is done below in ordersummary()
   book_qty = 1;
-  step = 0;
+
+  // step = 0;
 
   customerForm!: FormGroup;
   submitted = false;
-  isClickedPlaceorder:boolean=false;
-  isUpdatedAddress:boolean=false;
+  // iscustomercontinue=false;
 
-  constructor(private books: BookService, private formbuilder: FormBuilder, private user: UserService, private route:Router) { }
+  step1:any;
+  step1button:boolean=true;
+  step2:any;
+  step2button:boolean=true;
+
+  address:any;
+  fullName:any;
+  mobileNo:any;
+  disabled:boolean=true;
+  
+  constructor(private books: BookService, private formbuilder: FormBuilder, private user: UserService, private route:Router) {
+    // this is done for patch value in customer details part
+    this.fullName=localStorage.getItem('fullName');
+    this.mobileNo=localStorage.getItem('phone');
+   }
 
   ngOnInit(): void {
     this.getcartlist();
@@ -39,7 +54,22 @@ export class GetcartComponent implements OnInit {
     this.books.usergetcartlist().subscribe((response: any) => {
       console.log(response);
       this.cartcount = response.result.length
-      this.cartbooks = response.result
+      this.cartbooks = response.result;
+
+      for(this.book of this.cartbooks){
+
+        this.address={
+            "fullName": this.book.user_id.fullName,
+            "mobileNo": this.book.user_id.phone
+        }
+
+        this.customerForm.patchValue({
+          "fullName": this.address.fullName,
+          "mobileNo": this.address.mobileNo
+        });
+        console.log(this.address);
+        
+      }
 
     })
   }
@@ -64,17 +94,54 @@ export class GetcartComponent implements OnInit {
 
     })
   }
-  setStep(index: number) {
-    this.step = index;
+
+  setStep(index: any) {
+    if (index == 1) {
+      if(this.cartcount>=1){
+      this.disabled=false;
+      this.step1 = true;
+      this.step1button = false;
+     
+    }
+    }
+    else if (index == 2) {
+      if (this.customerForm.valid){
+      this.step2 = true;
+      this.step2button = false;
+    }
+    }
   }
 
-  nextStep() {
-    this.step++;
-  }
+  // enable(){
+  //   if(this.cartcount>=1){
+  //     this.disabled=true;
+  //   }
+  // }
 
-  prevStep() {
-    this.step--;
-  }
+  // setStep(index: number) {
+  //   // if(this.book.cartcount>=1){
+  //     this.step = index;
+  //   // }  
+  // }
+
+  // nextStep() {
+  //   // if(this.book.cartcount>=1){
+
+  //   //  if (this.customerForm.valid) {
+  //     // this.submitted = true;
+
+  //   //  this.iscustomercontinue=true;
+  //   this.step++;
+    
+  //   //  }
+
+  //   // }
+  
+  // }
+
+  // prevStep() {
+  //   this.step--;
+  // }
 
   removecartitem(book: any) {
     this.books.userremovecartitem(book._id).subscribe((response: any) => {
@@ -86,6 +153,7 @@ export class GetcartComponent implements OnInit {
 
   onSubmit() {
     this.submitted = true;
+    
 
     if (this.customerForm.valid) {
       console.log(this.customerForm.value);
@@ -103,13 +171,16 @@ export class GetcartComponent implements OnInit {
       })
     }
     else {
-      console.log("enter data");
+      console.log("Please fill the form");
     }
 
 
   }
 
   ordersummary() {
+
+    if(this.cartcount>=1){
+
     this.cartbooks.forEach((element: any) => {  //whatever data we have inside cartBooks we are assigning to element by using forEach 
       console.log(element);
       this.orderlist.push({     // push method adds the element at the end of an array
@@ -130,5 +201,6 @@ export class GetcartComponent implements OnInit {
     })
     this.route.navigateByUrl("/dashboard/orderplacedsuccessfully")
   }
+}
 
 }
