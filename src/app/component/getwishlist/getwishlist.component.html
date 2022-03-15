@@ -5,10 +5,10 @@
     </mat-card>
 
     <mat-card class="book" fxLayout="row" fxLayoutAlign="start center" *ngFor="let book of wishlistitem">
-        
+
         <div fxLayout="column" fxLayoutGap="20px">
-            <div class="cartbook" fxLayout="row" fxLayoutAlign="start center" >
-                
+            <div class="cartbook" fxLayout="row" fxLayoutAlign="start center">
+
                 <div>
                     <div class="image" fxLayoutAlign="start center">
                         <img class="bookImage" src="../../../assets/Image 11@2x.png">
@@ -40,9 +40,9 @@
         </div>
 
         <div class="rightdiv" fxLayout="column" fxLayoutAlign="end center">
-                
-            <img class="deleteimg" (click)="removewishlistitem(book)" src="../../../assets/delete_black_24dp (1).svg" >
-           
+
+            <img class="deleteimg" (click)="removewishlistitem(book)" src="../../../assets/delete_black_24dp (1).svg">
+
         </div>
 
     </mat-card>
