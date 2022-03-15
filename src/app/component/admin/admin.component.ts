@@ -86,10 +86,10 @@ export class AdminComponent implements OnInit {
 
   }
 
-  deletebook(book:any){
-    this.books.admindeletebook(book._id).subscribe((response:any)=>{
+  deletebook(book: any) {
+    this.books.admindeletebook(book._id).subscribe((response: any) => {
       console.log(response);
-      
+
       window.location.reload();
     });
   }
