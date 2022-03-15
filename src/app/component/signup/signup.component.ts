@@ -41,22 +41,22 @@ export class SignupComponent implements OnInit {
         // service: this.signupForm.value.service
 
       }
-      if(this.signupForm.value.selectoption == '1') { 
-      this.user.userSignup(payload).subscribe((response: any) => {    //subscribe is a method from observable
-        console.log(response)
+      if (this.signupForm.value.selectoption == '1') {
+        this.user.userSignup(payload).subscribe((response: any) => {    //subscribe is a method from observable
+          console.log(response)
 
-        // setting this fullname as we have to get it in profile button in dashboard for printing name after welcome & email, password, phone we are getting in getcart customer details form doing this as sir asked to do so
-        //localStorage.setItem('fullName',response.result.fullName);
-        // localStorage.setItem('email', response.result.email);
-        // localStorage.setItem('password', response.result.password);
-        // localStorage.setItem('mobileNo', response.result.phone);
+          // setting this fullname as we have to get it in profile button in dashboard for printing name after welcome & email, password, phone we are getting in getcart customer details form doing this as sir asked to do so
+          //localStorage.setItem('fullName',response.result.fullName);
+          // localStorage.setItem('email', response.result.email);
+          // localStorage.setItem('password', response.result.password);
+          // localStorage.setItem('mobileNo', response.result.phone);
 
-      })
-    }else if(this.signupForm.value.selectoption == '2') {
-      this.user.adminsignup(payload).subscribe((response: any) => {    //subscribe is a method from observable
-        console.log(response)
-      })
-    }
+        })
+      } else if (this.signupForm.value.selectoption == '2') {
+        this.user.adminsignup(payload).subscribe((response: any) => {    //subscribe is a method from observable
+          console.log(response)
+        })
+      }
     } else {
       console.log("enter data");
     }
