@@ -7,8 +7,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./orderplacedsuccessfully.component.scss']
 })
 export class OrderplacedsuccessfullyComponent implements OnInit {
-
-  constructor(private route:Router) { }
+  // email:any;
+  // mobileNo:any;
+  constructor(private route:Router) {
+    // this.email=localStorage.getItem('email');
+    // this.mobileNo=localStorage.getItem('phone');
+   }
 
   ngOnInit(): void {
   }
