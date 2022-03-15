@@ -5,43 +5,21 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class SearchbookPipe implements PipeTransform {
 
-  transform(value: any = [], filterString?: string) {
+  transform(value: any = [], filterString?: string) {  // this is a transform method used to transform our O/P.
     console.log(filterString);
-    
-    // if (value.length === 0 || filteredString === ''){
-    //   return value;
-    // }
 
     if (filterString == '' || filterString == null) {
       return value;
     }
 
-    // const allbooks = [];
-    // for (const book of value) {
-    //   if (book['bookName'] === filteredString){
-
-    //     allbooks.push(book);
-    //   }
-    // }
-
     const allbooks = []
     for (const book of value) {
-      if (book.bookName.includes(filterString) || book.description.includes(filterString)
-        || book.author.includes(filterString)) {
+      if (book.bookName.toLowerCase().includes(filterString) || book.description.toLowerCase().includes(filterString)
+        || book.author.toLowerCase().includes(filterString)) {
         allbooks.push(book);
       }
     }
     return allbooks;
-
-    // const booksArray = []
-    // for (const Book of value) {
-    //   if (Book.bookName.includes(filterString) || Book.description.includes(filterString)
-    //     || Book.author.includes(filterString)) {
-    //     booksArray.push(Book);
-    //   }
-    // }  
-    // return booksArray;  
-
   }
 
 }
