@@ -10,23 +10,20 @@ import { DataService } from 'src/app/services/dataservice/data.service';
 })
 export class DashboardComponent implements OnInit {
   // filteredString: string = '';  // done for search pipe part
-   isSearch =false; // done for search pipe part
+  isSearch = false; // done for search pipe part
   badgecount: any; // done for badge count
-
-  fullName:any;
+  fullName: any;
 
   constructor(private route: Router, private books: BookService, private dataservice: DataService) {
     // this.fullName=localStorage.getItem("fullName");
-   this.fullName=localStorage.getItem('fullName');
+    this.fullName = localStorage.getItem('fullName');
     //  this.fullName=localStorage.getItem('email');
 
-   }
+  }
 
   ngOnInit(): void {
     this.getcartcountforbadge();
     // this.cart();
-
-
 
   }
   bookstore() {
@@ -37,9 +34,6 @@ export class DashboardComponent implements OnInit {
 
     this.books.usergetcartlist().subscribe((response: any) => {  // here we are doing the API integration of getcartitems in dashboard.ts for getting the count of items in cart for badge count part which is already once done in getcart.component.ts 
       console.log(response.result);
-
-      // this.badgecount=response.result.length
-
     })
     this.route.navigateByUrl("/dashboard/getcart")
   }
@@ -63,9 +57,8 @@ export class DashboardComponent implements OnInit {
     this.route.navigateByUrl('/login')
   }
 
-  clearFilter(search: any) {  // THIS IS DONE FOR SEARCH PIPE PART IN GETALLBOOKS AND DASHBOARD
+  clearFilter(search: any) {  // This is done for search pipe part in getallbooks and dashboard
     console.log(search);  //this .target.value is coming from console
-
     this.dataservice.sendData(search) // done for search pipe & this .target.value is coming from console
   }
 

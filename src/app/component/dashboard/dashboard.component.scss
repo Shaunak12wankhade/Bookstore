@@ -3,7 +3,9 @@
 background-color: darkred;
    width: 100%;
    position: fixed;
-   overflow:hidden;
+//    overflow:hidden;
+// top: 0;
+// position: sticky;
 }
 .imgandtext{
    margin-left: -18px;
@@ -68,6 +70,7 @@ p{
     color: white; 
     opacity: 0.9;
     font-size: x-small;
+    margin-top: -5px;
 }
 .logoutbutton{
     border: 1px solid darkred;
