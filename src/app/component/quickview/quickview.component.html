@@ -1,6 +1,6 @@
-<div fxLayout="row" fxLayoutAlign="center start" fxLayout.xs="row" fxFlex.xs="95">
+<div class="section" fxLayout="row" fxLayoutAlign="center start" fxLayout.xs="column" fxFlex.xs="95">
 
-    <div class="smallimages" fxLayout="column" fxLayoutGap="10px">
+    <div class="smallimages" fxLayout="column" fxLayoutGap="10px" fxHide.sm fxHide.xs >
         <div class="small1">
             <img class="img1" src="../../../assets/Image 11@2x (1).png" alt="">
         </div>
@@ -17,7 +17,7 @@
             </div>
         </div>
 
-        <div class="cartandwishlistbutton" fxLayout="row" fxLayoutGap="40px" fxLayoutAlign="space-between center">
+        <div class="cartandwishlistbutton" fxLayoutGap="5px" fxLayout="row"  fxLayoutAlign="space-between center">
             <div>
                 <button *ngIf="addtobag" mat-raised-button class="addtobag" (click)="addtocart()">
                     ADD TO BAG
@@ -47,7 +47,7 @@
         </div>
     </div>
 
-    <div class="bookdetailsdiv" fxLayout="column" fxLayout.xs="column" fxFlex.xs="95">
+    <div class="bookdetailsdiv" fxLayout="column" fxLayout.xs="column" >
         <div class="entirebook" fxLayout="column" fxLayout.sm="column">
 
             <div class="bookname">
@@ -97,7 +97,7 @@
             <div class="rate">
                 <p class="ratename">Overall Rating</p>
                 <div>
-                    <div class="star-widget">
+                    <div class="star-widget" fxLayout="row">
 
                         <input type="radio" name="rate" id="rate-5" [(ngModel)]="value" value="5">
                         <!-- this =value is coming from quickview.ts used inside addfeedback() inside rating: this.value-->

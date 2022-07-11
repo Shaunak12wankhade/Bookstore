@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  baseurl:"https://bookstore.incubation.bridgelabz.com/bookstore_user/"
 };

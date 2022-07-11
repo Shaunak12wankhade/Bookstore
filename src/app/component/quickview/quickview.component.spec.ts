@@ -1,4 +1,6 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';  // this module is used for router-routermodule and also for activated route errpr
 
 import { QuickviewComponent } from './quickview.component';
 
@@ -8,7 +10,8 @@ describe('QuickviewComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ QuickviewComponent ]
+      declarations: [ QuickviewComponent ],
+      imports:[HttpClientTestingModule,RouterTestingModule]
     })
     .compileComponents();
   });

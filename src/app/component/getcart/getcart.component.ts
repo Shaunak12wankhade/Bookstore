@@ -51,15 +51,16 @@ export class GetcartComponent implements OnInit {
       console.log(response);
       this.cartcount = response.result.length
       this.cartbooks = response.result;
-
+      
+      // this for loop is used so that in customer details form fullname and phone no will be by default feeded & this is done with the help of patch value
       for (this.book of this.cartbooks) {
-
+        
         this.address = {
-          "fullName": this.book.user_id.fullName,
+          "fullName": this.book.user_id.fullName, // this user_id is taken from console as our fullName and phone is stored inside user_id
           "mobileNo": this.book.user_id.phone
         }
 
-        this.customerForm.patchValue({
+        this.customerForm.patchValue({ 
           "fullName": this.address.fullName,
           "mobileNo": this.address.mobileNo
         });
@@ -161,14 +162,14 @@ export class GetcartComponent implements OnInit {
       this.cartbooks.forEach((element: any) => {  //whatever data we have inside cartBooks we are assigning to element by using forEach 
         console.log(element);
         this.orderlist.push({     // push method adds the element at the end of an array
-          "product_id": element.product_id._id,  // here we are accessing the particular product id's id, bookname, quantity, price from element(where tha data of all books is stored)
+          "product_id": element.product_id._id,  // here we are accessing the particular product id's _id, bookname, quantity, price from element(where tha data of all books is stored)
           "product_name": element.product_id.bookName,
           "product_quantity": element.product_id.quantityToBuy,
           "product_price": element.product_id.price
         })
       });
       let data = {
-        "orders": this.orderlist
+        "orders": this.orderlist //this "orders" must be coming from  backend from swagger
       }
 
       this.books.usercheckout(data).subscribe((response: any) => {

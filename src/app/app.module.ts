@@ -1,12 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SignupComponent } from './component/signup/signup.component';
 import { LoginComponent } from './component/login/login.component';
-
 import {MatFormFieldModule} from '@angular/material/form-field';  //its is a parent module for input module, mat label, mat buttons, mat checkbox etc etc.... 
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { MatInputModule } from '@angular/material/input';
@@ -22,7 +20,6 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import { GetallbooksComponent } from './component/getallbooks/getallbooks.component';
 import { QuickviewComponent } from './component/quickview/quickview.component';
-
 import {NgxPaginationModule} from 'ngx-pagination';
 import { GetcartComponent } from './component/getcart/getcart.component';
 import {MatExpansionModule} from '@angular/material/expansion';
@@ -36,7 +33,6 @@ import {MatBadgeModule} from '@angular/material/badge';
 import { AdminAddandupdateComponent } from './component/admin-addandupdate/admin-addandupdate.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { AdminupdateComponent } from './component/adminupdate/adminupdate.component';
-
 import { NgxStarRatingModule } from 'ngx-star-rating';
 
 

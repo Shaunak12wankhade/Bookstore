@@ -1,4 +1,4 @@
-<mat-toolbar class="mattoolbar" fxLayoutAlign="center center">
+<mat-toolbar class="mattoolbar" fxLayoutAlign="center center" >
     <mat-toolbar-row>
         <div class="imgandtext" (click)="bookstore()" fxLayout="row" fxLayout.xs="row">
             <div>
@@ -10,7 +10,7 @@
 
         </div>
 
-        <mat-card class="searchbar" fxLayout="row" fxLayout.xs="row">
+        <mat-card class="searchbar" fxLayout="row" fxLayout.xs="row" fxHide.sm fxHide.xs>
             <img class="searchimg" src="../../../assets/search_black_24dp (1).svg" alt="">
 
             <input class="search1" type="text" name="search" placeholder="Search" #search
@@ -21,7 +21,7 @@
         <div class="profile" [matMenuTriggerFor]="menu" fxLayout="column" fxLayoutAlign="center center"
             fxLayout.xs="row" fxFlex.xs="50">
             <img class="profileimg" src="../../../assets/person_white_24dp.svg" alt="">
-            <p>Profile</p>
+            <p fxHide.sm fxHide.xs>Profile</p>
 
             <mat-menu class="matmenu" #menu="matMenu">
                 <div fxLayout="column" fxLayoutGap="3px">
@@ -41,13 +41,13 @@
         </div>
 
         <div class="cart" (click)="cart()" fxLayout="column" fxLayoutAlign="center center" fxLayout.xs="row"
-            fxFlex.xs="50">
+            fxFlex.xs="50" >
 
-            <button style="background-color: darkred; border: none; cursor: pointer;" matBadge={{badgecount}}
+            <button class="button" style="background-color: darkred; border: none; cursor: pointer;" matBadge={{badgecount}}
                 matBadgeSize="small" matBadgePosition="after" matBadgeColor="warn" [matBadgeHidden]="badgecount==0">
                 <img class="cartimg" src="../../../assets/shopping_cart_white_24dp.svg" alt="">
             </button>
-            <p style="margin-top:-10px;">Cart</p>
+            <p fxHide.sm fxHide.xs style="margin-top:-10px;">Cart</p>
 
         </div>
 

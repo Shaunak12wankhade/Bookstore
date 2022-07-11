@@ -1,146 +1,244 @@
-.bookandCount{
-    margin-left: 134px; 
-    margin-top: 45px;
-}
-.books{
-    font-size: 25px;
-
-}
-.count{
-    margin-left: 10px;
-    font-size: 15px;
-    opacity: 0.6;
-}
-.sortbyrelevance{
-    margin-top: 80px; 
-    margin-right: 134px;
-    border-radius: none;
-    outline: none;
-
-}
-.mat-form-field{
-   outline: none;
-   border-radius: none;
-
-}
-.matselect{
-   height: 10px;
-   outline: none;
+.bookandCount {
+  margin-left: 134px;
+  margin-top: 45px;
 }
 
-.entirebook{
-    border: 1px solid gainsboro;
-    width: 250px;
-    height: 350px;
-    // margin-right: 65%;
-    margin: 20px;
+.books {
+  font-size: 25px;
+
 }
-.entirebook:hover{
-    box-shadow: rgba(0,0,0,0.24) 0px 3px 8px;
-    
+
+.count {
+  margin-left: 10px;
+  font-size: 15px;
+  opacity: 0.6;
 }
-.bookimg{
-    width: 251px;
-    height: 210px;  
-    background-color: gainsboro;
-    margin-top: -1px;
+
+.sortbyrelevance {
+  margin-top: 80px;
+  margin-right: 134px;
+  border-radius: none;
+  outline: none;
+
 }
-.img1{
-    width: 110px;
-    height: 140px;
-    margin-left: 70px;
-    margin-top: 35px;
-    cursor: pointer;
+
+.mat-form-field {
+  outline: none;
+  border-radius: none;
+
 }
-.bookname{
-    margin-left: 15px;
-    font-family: Roboto;
-    font-weight: 500; 
-    margin-top: 8px;
-  }
-  .author{
-    //border: 1px solid green;
-    font-size: 10px; 
-    color: grey; 
-    margin-left: 15px;    
-  }
-  .rating{
-    font-size: 10px; 
-    margin-left: 15px;
-    background: rgba(0, 100, 0, 0.87);
-    color: white;
-    height: 14px;
-    width: 35px;
-  }
-  .Star{
-    height: 11px;
-    width: 11px;
-    font-size: 10px; 
-    margin-top: -1px;
-    // margin-left: 3px;
-  }
-  .quantity{
-    font-size: 10px;
-    margin-top: -18px;
-    margin-left: 55px;
-  }
-  .price{
-    font-size: 10px;
-    margin-left: 15px;
-    margin-bottom: 10%;
-  }
-  .discountprice{
-    font-weight: 600;
-  }
-  .originalprice{
-    color: grey;
-    margin-left: 5px;
-  }
-  
-.cartandwishlistbutton{
+
+.matselect {
+  height: 10px;
+  outline: none;
+}
+
+.entirebook {
+  border: 1px solid gainsboro;
+  width: 250px;
+  height: 350px;
+  // margin-right: 65%;
+  margin: 20px;
+}
+
+.entirebook:hover {
+  //syntax: box-shadow: offsetX   offsetY   blur-radius   color;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+
+.bookimg {
+  width: 251px;
+  height: 210px;
+  background-color: gainsboro;
+  margin-top: -1px;
+}
+
+.img1 {
+  width: 110px;
+  height: 140px;
+  margin-left: 70px;
+  margin-top: 35px;
+  cursor: pointer;
+}
+
+.bookname {
+  margin-left: 15px;
+  font-family: Roboto;
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+.author {
+  // border: 1px solid green;
+  font-size: 10px;
+  color: grey;
+  margin-left: 15px;
+}
+
+.rating {
+  font-size: 10px;
+  margin-left: 15px;
+  background: rgba(0, 100, 0, 0.87);
+  color: white;
+  height: 14px;
+  width: 35px;
+}
+
+.Star {
+  height: 11px;
+  width: 11px;
+  font-size: 10px;
+  margin-top: -1px;
+  // margin-left: 3px;
+}
+
+.quantity {
+  font-size: 10px;
+  margin-top: -18px;
+  margin-left: 55px;
+}
+
+.price {
+  font-size: 10px;
+  margin-left: 15px;
+  margin-bottom: 10%;
+}
+
+.discountprice {
+  font-weight: 600;
+}
+
+.originalprice {
+  color: grey;
+  margin-left: 5px;
+}
+
+.cartandwishlistbutton {
   margin-top: -20px;
   margin-left: 5px;
   // position: sticky;
-    
+
 
 }
-.addtobag{
-    //  background: brown; 
-     color: rgba(255, 255, 255, 0.767); 
-    //  color: black;
-    width: 100%;
-    cursor: pointer;
-    // border: 1px solid gainsboro; 
+
+.addtobag {
+  //  background: brown; 
+  color: rgba(255, 255, 255, 0.767);
+  //  color: black;
+  width: 100%;
+  cursor: pointer;
+  // border: 1px solid gainsboro; 
 
 }
-.addedtobag{
+
+.addedtobag {
   background: brown;
-  color: rgba(255, 255, 255, 0.767);  
+  color: rgba(255, 255, 255, 0.767);
 }
-.cartimg{
+
+.cartimg {
   color: black;
 }
-.wishlist{
-    // background: brown; 
-    color: rgba(255, 255, 255, 0.767); 
-    width: 95%;
-    cursor: pointer;
-     border: 1px solid gainsboro;   
+
+.wishlist {
+  // background: brown; 
+  color: rgba(255, 255, 255, 0.767);
+  width: 95%;
+  cursor: pointer;
+  border: 1px solid gainsboro;
 
 }
-.wishlistIcon{
+
+.wishlistIcon {
   color: black;
 }
-.wishlistIcon:hover{
-  color: red;
-}
+
+// .wishlistIcon:hover{
+//   color: red;
+// }
 .my-pagination ::ng-deep .ngx-pagination .current {
   background: brown;
   justify-content: center;
 }
 
-.pagination{
+.pagination {
   //  border: 1px solid red;
   //  justify-content: center;
-  
+
+}
+
+@media (max-width: 420px) {
+  .bookandCount {
+    // border: 1px solid red; 
+    margin-right: 30px;
+    // margin-left: 134px; 
+    margin-top: 45px;
+
+    width: 200px;
+    display: flex;
+    position: relative;
+    right: 110px;
+  }
+
+  .books {
+    font-size: 25px;
+    // margin-right: 5px;
+
+  }
+
+  .count {
+    // border: 1px solid blue;
+    width: 80px;
+    margin-left: 10px;
+    font-size: 15px;
+    opacity: 0.6;
+  }
+
+  .sortbyrelevance {
+    // border: 1px solid red;
+    margin-top: 60px;
+    // margin-right: 134px;
+    border-radius: none;
+    outline: none;
+
+    position: relative;
+    right: 115px;
+
+  }
+
+  .mat-form-field {
+    outline: none;
+    margin-top: 4px;
+    border-radius: none;
+
+    position: relative;
+    right: 15px;
+
+  }
+
+  .matselect {
+    height: 10px;
+
+    // margin-right: -15px;
+    outline: none;
+  }
+ 
+.entirebook {
+  border: 1px solid gainsboro;
+  width: 250px;
+  height: 350px;
+  // margin-right: 65%;
+  margin: 20px;
+
+  margin-left: 33px;
+}
+
+
+.pagination {
+  // border: 1px solid red;
+  //  justify-content: center;
+  margin-right: 20px;
+}
+
 }

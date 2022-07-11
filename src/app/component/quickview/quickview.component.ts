@@ -26,7 +26,7 @@ export class QuickviewComponent implements OnInit {
 
     // this.bookid=localStorage.getItem("bookId") 
 
-    this.bookid = this.activatedroute.snapshot.paramMap.get("bookId"); // we are getting/storing bookid by using activated route part and not by using local storage as done and commented above
+    this.bookid = this.activatedroute.snapshot.paramMap.get("bookId"); //this "bookID" we have set in the getallbooks.ts in quickview() method & we are getting/storing bookid by using activated route part and not by using local storage as done and commented above
     console.log(this.bookid);
 
     this.getbook();
@@ -102,7 +102,7 @@ export class QuickviewComponent implements OnInit {
 
   updatequantity() {
     let req = {
-      "quantityToBuy": this.book_qty  // this quantityToBuy is coming from backend & book_qty is coming from string interpolation done in getcart.html
+      "quantityToBuy": this.book_qty  // this quantityToBuy is coming from backend & book_qty is coming from string interpolation done in quickview.html & getcart.html
     }
     this.books.userupdatequantity(this.bookdata._id, req).subscribe((response: any) => {
       console.log(response);
