@@ -1,5 +1,5 @@
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterTestingModule } from '@angular/router/testing';
 
@@ -26,4 +26,32 @@ describe('GetcartComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should render my cart', () => {
+    const fixture = TestBed.createComponent(GetcartComponent);
+    // fixture.detectChanges();
+    // const compiled = fixture.debugElement.nativeElement;
+    expect(fixture.debugElement.nativeElement.querySelector('mat-icon').textContent).toContain('place');
+  });
+
+  it('should render mat-panel title order summary', () => {
+    const fixture = TestBed.createComponent(GetcartComponent);
+    // fixture.detectChanges();
+    // const compiled = fixture.debugElement.nativeElement;
+    expect(fixture.debugElement.nativeElement.querySelector('.panel3 mat-panel-title').textContent).toContain('Order Summary');
+  });
+
+  
+  it('should', async(() => {
+    spyOn(component, 'ordersummary');
+  
+    let button = fixture.debugElement.nativeElement.querySelector('.checkoutbutton');
+    button.click();
+  
+    fixture.whenStable().then(() => {
+      expect(component.ordersummary).toHaveBeenCalled();
+    });
+  }));
+
+  
 });

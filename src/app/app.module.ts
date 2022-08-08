@@ -31,7 +31,7 @@ import { AdminComponent } from './component/admin/admin.component';
 import { SearchbookPipe } from './component/pipe/searchbook.pipe';
 import {MatBadgeModule} from '@angular/material/badge';
 import { AdminAddandupdateComponent } from './component/admin-addandupdate/admin-addandupdate.component';
-import {MatDialogModule} from '@angular/material/dialog';
+import {MatDialogModule, MatDialogRef} from '@angular/material/dialog';
 import { AdminupdateComponent } from './component/adminupdate/adminupdate.component';
 import { NgxStarRatingModule } from 'ngx-star-rating';
 
@@ -77,7 +77,7 @@ import { NgxStarRatingModule } from 'ngx-star-rating';
     MatDialogModule,
     NgxStarRatingModule
   ],
-  providers: [],
+  providers: [MatDialogRef],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

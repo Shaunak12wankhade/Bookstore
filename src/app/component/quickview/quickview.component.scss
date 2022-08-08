@@ -296,6 +296,30 @@ input#rate-5:checked ~ label{
 .section{
     border: none;
 }
+
+
+@media(max-width:550px){
+
+
+.imageandbutton{
+    //border:2px solid yellow;
+    width: 280px;
+    height: 380px;
+    margin-top: 20%;
+    margin-left: 18px;
+
+}
+    .bookparagraph{
+        // border: 1px solid red;
+        width: 350px;
+    }
+    .overallrating{
+        //border: 1px solid green;
+        width: 350px;
+    }
+}
+
+
 // @media only screen and(min-width:0px) and(max-width:400px) {
 //     .section{
 //         // width:400px;

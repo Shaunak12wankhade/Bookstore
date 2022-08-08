@@ -79,11 +79,12 @@
 }
 .rightdiv{
     // border: 1px solid yellow;
-    // margin-top: -50px;
+    margin-top: 60px;
     margin-left: 600px;
     // margin-right: 5%;
-    justify-content: center;
+   
     opacity: 0.6;
+    cursor: pointer;
 }
 
 .checkoutbutton{
@@ -97,4 +98,33 @@
 .deleteimg{
 //    border: 1px solid red;
 
+}
+@media(max-width:550px){
+    .wishlist{
+        width: 300px;
+    }
+    .book{
+        // border: 1px gainsboro;
+        border: 1px solid red;
+        // height: auto;
+        // width: 65%;
+        // margin-left: 16%;
+        // margin-top: 0px;
+        // border-radius: 0px;
+
+        width: 300px;
+    }
+
+    
+    .rightdiv{
+        border: 1px solid yellow;
+        margin-top: 60px;
+        // margin-right: 5%;
+
+        margin-left: 25px;
+        // justify-content: center;
+        // opacity: 0.6;
+
+    }
+  
 }

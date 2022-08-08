@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { GetallbooksComponent } from './getallbooks.component';
 import { HttpClientTestingModule} from '@angular/common/http/testing';
@@ -30,4 +30,23 @@ describe('GetallbooksComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should render title in a h2 tag', () => {
+    const fixture = TestBed.createComponent(GetallbooksComponent);
+    // fixture.detectChanges();
+    // const compiled = fixture.debugElement.nativeElement;
+    expect(fixture.debugElement.nativeElement.querySelector('span').textContent).toContain('Books');
+  });
+  
+  it('should test sort by relevance low method', async(() => {
+    spyOn(component, 'lowtohigh');
+  
+    let button = fixture.debugElement.nativeElement.querySelector('mat-option');
+    button.click();
+  
+    fixture.whenStable().then(() => {
+      expect(component.lowtohigh).toHaveBeenCalled();
+    });
+  }));
+
 });

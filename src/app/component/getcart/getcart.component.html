@@ -1,8 +1,14 @@
 <mat-accordion class="example-headers-align">
     <mat-expansion-panel class="panel1" [expanded]="true" hideToggle>
         <mat-expansion-panel-header>
-            <mat-panel-title>
-                My Cart({{cartcount}})
+            <mat-panel-title class="countandlocation" fxLayout="row"  fxLayout.sm="row" fxLayout.xs="row" >
+                <div class="count">
+                    My Cart({{cartcount}})
+                </div>
+                <div class="location" fxLayoutAlign="center center">
+                    <mat-icon class="placeIcon">place</mat-icon>
+                    <span class="currentlocation">Use current location</span>
+                </div>
             </mat-panel-title>
 
         </mat-expansion-panel-header>
@@ -52,23 +58,21 @@
                     </div>
 
                 </div>
+               
 
-                <div class="rightdiv" fxLayout="column" fxLayout.sm="column" fxLayout.xs="column"
-                    fxLayoutAlign="space-between center" fxLayoutGap="80%">
-                    <div class="location" fxLayoutAlign="center center">
-                        <mat-icon class="placeIcon">place</mat-icon>
-                        <span class="currentlocation">Use current location</span>
-                    </div>
-                    <div>
-                        <button mat-flat-button class="button" color="primary" *ngIf="step1button && disabled"
-                            (click)="setStep(1)">Place Order
+                <!-- <div class="rightdiv" fxLayout="column" fxLayout.sm="column" fxLayout.xs="column"
+                    fxLayoutAlign="space-between center">
 
-                        </button>
-                    </div>
-                </div>
+                    
+                </div> -->
 
             </div>
 
+        </div>
+        <div >
+            <button mat-flat-button class="button" color="primary" *ngIf="step1button && disabled"
+                (click)="setStep(1)">Place Order
+            </button>
         </div>
     </mat-expansion-panel>
 
@@ -180,8 +184,7 @@
 
 
                 </div>
-                <div class="addressandcontinue" fxLayout="column" 
-                 fxLayoutAlign="space-between center"
+                <div class="addressandcontinue" fxLayout="column" fxLayoutAlign="space-between center"
                     fxLayoutGap="50%">
                     <div class="address" fxLayoutAlign="center center" fxHide.sm fxHide.xs>
                         <span>Add New Address</span>
@@ -247,14 +250,18 @@
 
                 <div class="rightdiv" fxLayout="column" fxLayoutAlign="space-between center">
 
-                    <div>
+                    <!-- <div>
                         <button mat-flat-button class="checkoutbutton" (click)="ordersummary()"
                             color="primary">Checkout</button>
-                    </div>
+                    </div> -->
                 </div>
 
             </div>
 
+        </div>
+        <div>
+            <button mat-flat-button class="checkoutbutton" (click)="ordersummary()"
+                color="primary">Checkout</button>
         </div>
 
     </mat-expansion-panel>

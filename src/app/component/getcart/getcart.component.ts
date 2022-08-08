@@ -179,6 +179,10 @@ export class GetcartComponent implements OnInit {
       })
       this.route.navigateByUrl("/dashboard/orderplacedsuccessfully")
     }
+    else {
+      console.log("Please fill the form");
+    }
   }
+  
 
 }

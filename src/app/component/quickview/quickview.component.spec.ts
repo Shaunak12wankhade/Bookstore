@@ -1,5 +1,5 @@
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';  // this module is used for router-routermodule and also for activated route errpr
 
 import { QuickviewComponent } from './quickview.component';
@@ -25,4 +25,36 @@ describe('QuickviewComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should render mat-icon favorite', () => {
+    const fixture = TestBed.createComponent(QuickviewComponent);
+    // fixture.detectChanges();
+    // const compiled = fixture.debugElement.nativeElement;
+    expect(fixture.debugElement.nativeElement.querySelector('mat-icon').textContent).toContain('favorite');
+  });
+
+  
+  it('should render add to bag click function', async(() => {
+    spyOn(component, 'addtocart');
+  
+    let button = fixture.debugElement.nativeElement.querySelector('.addtobag');
+    button.click();
+  
+    fixture.whenStable().then(() => {
+      expect(component.addtocart).toHaveBeenCalled();
+    });
+  }));
+
+  
+  it('should  render add to wishlist click function', async(() => {
+    spyOn(component, 'addtowishlist');
+  
+    let button = fixture.debugElement.nativeElement.querySelector('.wishlist');
+    button.click();
+  
+    fixture.whenStable().then(() => {
+      expect(component.addtowishlist).toHaveBeenCalled();
+    });
+  }));
+
 });

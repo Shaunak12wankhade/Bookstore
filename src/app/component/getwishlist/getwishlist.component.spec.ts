@@ -24,4 +24,11 @@ describe('GetwishlistComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  // it('should render my cart', () => {
+  //   const fixture = TestBed.createComponent(GetwishlistComponent);
+  //   // fixture.detectChanges();
+  //   // const compiled = fixture.debugElement.nativeElement;
+  //   expect(fixture.debugElement.nativeElement.querySelector('span').textContent).toContain('My Wishlist');
+  // });
 });

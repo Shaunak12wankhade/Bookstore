@@ -33,4 +33,18 @@ describe('LoginComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should allow user to login', () =>{
+    const formData ={
+      "email":"shaunak12wankhade@gmail.com",
+      "password":"satish@21"
+
+    };
+    component.loginForm.setValue(formData);
+    component.onSubmit();
+
+    
+    
+  })
+
 });
